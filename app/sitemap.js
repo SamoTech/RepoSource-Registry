@@ -7,5 +7,6 @@ export default function sitemap() {
     { url: siteUrl, changeFrequency: "weekly", priority: 1 },
     { url: `${siteUrl}/search`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/data`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/research`, changeFrequency: "monthly", priority: 0.8 },
   ];
 }
