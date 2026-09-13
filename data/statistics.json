@@ -1,10 +1,10 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-09-13T03:07:56Z",
   "minimum_stars": 2000,
-  "records_fetched": 0,
-  "records_accepted": 0,
+  "records_fetched": 33178,
+  "records_accepted": 33178,
   "records_rejected": 0,
-  "repository_count": 0,
-  "languages": 0,
-  "categories": 0
+  "repository_count": 33178,
+  "languages": 213,
+  "categories": 7
 }

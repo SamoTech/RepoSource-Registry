@@ -1,0 +1,30 @@
+[
+  {
+    "repository_id": 719547959,
+    "full_name": "twostraws/Inferno",
+    "owner": "twostraws",
+    "name": "Inferno",
+    "html_url": "https://github.com/twostraws/Inferno",
+    "api_url": "https://api.github.com/repos/twostraws/Inferno",
+    "description": "Metal shaders for SwiftUI.",
+    "stars": 2920,
+    "forks": 145,
+    "watchers": 2920,
+    "open_issues": 9,
+    "primary_language": "Metal",
+    "topics": [],
+    "license": "NOASSERTION",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2023-11-16T12:02:13Z",
+    "updated_at": "2026-09-12T03:45:53Z",
+    "pushed_at": "2026-05-17T08:21:54Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "repository_id": 150286546,
+    "full_name": "byt3bl33d3r/SILENTTRINITY",
+    "owner": "byt3bl33d3r",
+    "name": "SILENTTRINITY",
+    "html_url": "https://github.com/byt3bl33d3r/SILENTTRINITY",
+    "api_url": "https://api.github.com/repos/byt3bl33d3r/SILENTTRINITY",
+    "description": "An asynchronous, collaborative post-exploitation agent powered by Python and .NET's DLR",
+    "stars": 2342,
+    "forks": 428,
+    "watchers": 2342,
+    "open_issues": 48,
+    "primary_language": "Boo",
+    "topics": [
+      "boolang",
+      "c-sharp",
+      "dotnet",
+      "dotnet-dlr",
+      "dotnet-script",
+      "ironpython",
+      "post-exploitation",
+      "python3",
+      "red-teams",
+      "security-tools"
+    ],
+    "license": "GPL-3.0",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2018-09-25T15:17:30Z",
+    "updated_at": "2026-09-06T14:33:07Z",
+    "pushed_at": "2023-12-06T17:17:24Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "inactive"
+  }
+]

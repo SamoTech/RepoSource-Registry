@@ -1,0 +1,40 @@
+[
+  {
+    "repository_id": 233792,
+    "full_name": "GoldenCheetah/GoldenCheetah",
+    "owner": "GoldenCheetah",
+    "name": "GoldenCheetah",
+    "html_url": "https://github.com/GoldenCheetah/GoldenCheetah",
+    "api_url": "https://api.github.com/repos/GoldenCheetah/GoldenCheetah",
+    "description": "Performance Software for Cyclists, Runners, Triathletes and Coaches",
+    "stars": 2204,
+    "forks": 474,
+    "watchers": 2204,
+    "open_issues": 56,
+    "primary_language": "Standard ML",
+    "topics": [
+      "c-plus-plus",
+      "cycling",
+      "linux",
+      "macos",
+      "power-meter",
+      "qt",
+      "science",
+      "triathlon",
+      "windows"
+    ],
+    "license": "GPL-2.0",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2009-06-22T22:09:22Z",
+    "updated_at": "2026-09-12T11:59:22Z",
+    "pushed_at": "2026-09-10T22:57:47Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

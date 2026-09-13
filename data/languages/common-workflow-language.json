@@ -1,0 +1,37 @@
+[
+  {
+    "repository_id": 1530210,
+    "full_name": "SublimeText/LaTeXTools",
+    "owner": "SublimeText",
+    "name": "LaTeXTools",
+    "html_url": "https://github.com/SublimeText/LaTeXTools",
+    "api_url": "https://api.github.com/repos/SublimeText/LaTeXTools",
+    "description": "LaTeX plugin for Sublime Text",
+    "stars": 2023,
+    "forks": 378,
+    "watchers": 2023,
+    "open_issues": 64,
+    "primary_language": "Common Workflow Language",
+    "topics": [
+      "auto-complete",
+      "latex",
+      "sublime-snippets",
+      "sublime-text",
+      "sublime-text-package",
+      "sublime-text-plugin"
+    ],
+    "license": "NOASSERTION",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2011-03-26T18:59:50Z",
+    "updated_at": "2026-09-07T03:38:16Z",
+    "pushed_at": "2026-07-30T17:28:40Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

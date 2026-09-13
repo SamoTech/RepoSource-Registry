@@ -1,0 +1,38 @@
+[
+  {
+    "repository_id": 267188426,
+    "full_name": "gdquest-demos/godot-shaders",
+    "owner": "gdquest-demos",
+    "name": "godot-shaders",
+    "html_url": "https://github.com/gdquest-demos/godot-shaders",
+    "api_url": "https://api.github.com/repos/gdquest-demos/godot-shaders",
+    "description": "A large library of free and open-source shaders for the Godot game engine. Here, you'll get 2D and 3D shaders with playable demos.",
+    "stars": 4113,
+    "forks": 241,
+    "watchers": 4113,
+    "open_issues": 6,
+    "primary_language": "GDShader",
+    "topics": [
+      "game",
+      "game-assets",
+      "godot-engine",
+      "godot-shader",
+      "godot-shaders",
+      "shader-secrets",
+      "shaders"
+    ],
+    "license": "NOASSERTION",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2020-05-27T01:13:12Z",
+    "updated_at": "2026-09-12T18:01:04Z",
+    "pushed_at": "2026-05-16T07:48:40Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

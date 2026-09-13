@@ -1,0 +1,35 @@
+[
+  {
+    "repository_id": 305332301,
+    "full_name": "nvim-treesitter/nvim-treesitter-context",
+    "owner": "nvim-treesitter",
+    "name": "nvim-treesitter-context",
+    "html_url": "https://github.com/nvim-treesitter/nvim-treesitter-context",
+    "api_url": "https://api.github.com/repos/nvim-treesitter/nvim-treesitter-context",
+    "description": "Show code context",
+    "stars": 3226,
+    "forks": 241,
+    "watchers": 3226,
+    "open_issues": 32,
+    "primary_language": "Janet",
+    "topics": [
+      "neovim",
+      "neovim-plugin",
+      "vim",
+      "vim-plugin"
+    ],
+    "license": "MIT",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2020-10-19T09:32:33Z",
+    "updated_at": "2026-09-12T17:47:12Z",
+    "pushed_at": "2026-08-02T08:51:48Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

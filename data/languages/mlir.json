@@ -1,0 +1,30 @@
+[
+  {
+    "repository_id": 23496542,
+    "full_name": "triton-lang/triton",
+    "owner": "triton-lang",
+    "name": "triton",
+    "html_url": "https://github.com/triton-lang/triton",
+    "api_url": "https://api.github.com/repos/triton-lang/triton",
+    "description": "Development repository for the Triton language and compiler",
+    "stars": 20144,
+    "forks": 3189,
+    "watchers": 20144,
+    "open_issues": 1283,
+    "primary_language": "MLIR",
+    "topics": [],
+    "license": "MIT",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2014-08-30T17:07:16Z",
+    "updated_at": "2026-09-13T01:30:10Z",
+    "pushed_at": "2026-09-13T00:23:24Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "10k+",
+    "activity_status": "active"
+  }
+]

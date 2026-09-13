@@ -1,0 +1,40 @@
+[
+  {
+    "repository_id": 181247738,
+    "full_name": "historicalsource/zork1",
+    "owner": "historicalsource",
+    "name": "zork1",
+    "html_url": "https://github.com/historicalsource/zork1",
+    "api_url": "https://api.github.com/repos/historicalsource/zork1",
+    "description": "Zork I (Microcomputer Version) by Infocom",
+    "stars": 2951,
+    "forks": 359,
+    "watchers": 2951,
+    "open_issues": 2,
+    "primary_language": "ZIL",
+    "topics": [
+      "bruce-daniels",
+      "dave-lebling",
+      "infocom",
+      "interactive-fiction",
+      "marc-blank",
+      "tim-anderson",
+      "z-machine",
+      "zil",
+      "zork"
+    ],
+    "license": "MIT",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2019-04-14T01:45:52Z",
+    "updated_at": "2026-09-11T15:06:29Z",
+    "pushed_at": "2025-11-20T16:27:38Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "inactive"
+  }
+]

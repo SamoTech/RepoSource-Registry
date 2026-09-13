@@ -1,0 +1,30 @@
+[
+  {
+    "repository_id": 379635294,
+    "full_name": "Shopify/dawn",
+    "owner": "Shopify",
+    "name": "dawn",
+    "html_url": "https://github.com/Shopify/dawn",
+    "api_url": "https://api.github.com/repos/Shopify/dawn",
+    "description": "Shopify's first source available reference theme, with Online Store 2.0 features and performance built-in.",
+    "stars": 3076,
+    "forks": 4482,
+    "watchers": 3076,
+    "open_issues": 27,
+    "primary_language": "Liquid",
+    "topics": [],
+    "license": "NOASSERTION",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2021-06-23T14:43:21Z",
+    "updated_at": "2026-09-11T04:11:15Z",
+    "pushed_at": "2026-08-10T20:55:54Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

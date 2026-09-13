@@ -1,0 +1,35 @@
+[
+  {
+    "repository_id": 24187206,
+    "full_name": "AbsInt/CompCert",
+    "owner": "AbsInt",
+    "name": "CompCert",
+    "html_url": "https://github.com/AbsInt/CompCert",
+    "api_url": "https://api.github.com/repos/AbsInt/CompCert",
+    "description": "The CompCert formally-verified C compiler",
+    "stars": 2225,
+    "forks": 261,
+    "watchers": 2225,
+    "open_issues": 40,
+    "primary_language": "Rocq Prover",
+    "topics": [
+      "c",
+      "compcert",
+      "compiler",
+      "coq"
+    ],
+    "license": "NOASSERTION",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2014-09-18T12:27:33Z",
+    "updated_at": "2026-09-12T17:40:16Z",
+    "pushed_at": "2026-09-12T16:03:41Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

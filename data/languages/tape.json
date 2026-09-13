@@ -1,0 +1,32 @@
+[
+  {
+    "repository_id": 1150105392,
+    "full_name": "github/copilot-cli-for-beginners",
+    "owner": "github",
+    "name": "copilot-cli-for-beginners",
+    "html_url": "https://github.com/github/copilot-cli-for-beginners",
+    "api_url": "https://api.github.com/repos/github/copilot-cli-for-beginners",
+    "description": "Learn how to get started using the GitHub Copilot CLI!",
+    "stars": 2822,
+    "forks": 2524,
+    "watchers": 2822,
+    "open_issues": 6,
+    "primary_language": "Tape",
+    "topics": [
+      "ai-ready"
+    ],
+    "license": "MIT",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2026-02-04T22:15:07Z",
+    "updated_at": "2026-09-13T00:13:01Z",
+    "pushed_at": "2026-09-10T21:24:51Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

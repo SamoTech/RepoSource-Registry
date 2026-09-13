@@ -1,0 +1,49 @@
+[
+  {
+    "repository_id": 198466472,
+    "full_name": "terminusdb/terminusdb",
+    "owner": "terminusdb",
+    "name": "terminusdb",
+    "html_url": "https://github.com/terminusdb/terminusdb",
+    "api_url": "https://api.github.com/repos/terminusdb/terminusdb",
+    "description": "TerminusDB is a distributed, collaborative database designed for building, sharing, versioning, and reasoning on structured data.",
+    "stars": 3412,
+    "forks": 153,
+    "watchers": 3412,
+    "open_issues": 17,
+    "primary_language": "Prolog",
+    "topics": [
+      "acid",
+      "cms",
+      "collaboration",
+      "database",
+      "document-database",
+      "graph-database",
+      "headless",
+      "headless-cms",
+      "immutable",
+      "knowledge-graphs",
+      "linked-data",
+      "nosql",
+      "open-source",
+      "opensource",
+      "revision-control",
+      "terminusdb"
+    ],
+    "license": "Apache-2.0",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2019-07-23T16:15:27Z",
+    "updated_at": "2026-09-12T20:06:55Z",
+    "pushed_at": "2026-09-10T17:49:25Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [
+      "database"
+    ],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "repository_id": 615969,
+    "full_name": "racket/racket",
+    "owner": "racket",
+    "name": "racket",
+    "html_url": "https://github.com/racket/racket",
+    "api_url": "https://api.github.com/repos/racket/racket",
+    "description": "The Racket repository",
+    "stars": 5209,
+    "forks": 698,
+    "watchers": 5209,
+    "open_issues": 608,
+    "primary_language": "Racket",
+    "topics": [
+      "racket"
+    ],
+    "license": "NOASSERTION",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2010-04-18T06:39:16Z",
+    "updated_at": "2026-09-13T01:21:05Z",
+    "pushed_at": "2026-09-12T17:56:27Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "5k+",
+    "activity_status": "active"
+  }
+]

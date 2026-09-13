@@ -1,0 +1,63 @@
+[
+  {
+    "repository_id": 129571436,
+    "full_name": "leanprover/lean4",
+    "owner": "leanprover",
+    "name": "lean4",
+    "html_url": "https://github.com/leanprover/lean4",
+    "api_url": "https://api.github.com/repos/leanprover/lean4",
+    "description": "Lean 4 programming language and theorem prover",
+    "stars": 9149,
+    "forks": 978,
+    "watchers": 9149,
+    "open_issues": 1646,
+    "primary_language": "Lean",
+    "topics": [
+      "lean",
+      "lean4"
+    ],
+    "license": "Apache-2.0",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2018-04-15T02:49:20Z",
+    "updated_at": "2026-09-13T01:09:45Z",
+    "pushed_at": "2026-09-13T01:23:20Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "5k+",
+    "activity_status": "active"
+  },
+  {
+    "repository_id": 365697493,
+    "full_name": "leanprover-community/mathlib4",
+    "owner": "leanprover-community",
+    "name": "mathlib4",
+    "html_url": "https://github.com/leanprover-community/mathlib4",
+    "api_url": "https://api.github.com/repos/leanprover-community/mathlib4",
+    "description": "The math library of Lean 4",
+    "stars": 4111,
+    "forks": 1680,
+    "watchers": 4111,
+    "open_issues": 3384,
+    "primary_language": "Lean",
+    "topics": [
+      "lean4"
+    ],
+    "license": "Apache-2.0",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2021-05-09T07:52:01Z",
+    "updated_at": "2026-09-13T02:55:48Z",
+    "pushed_at": "2026-09-13T02:55:57Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

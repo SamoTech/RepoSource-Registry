@@ -1,0 +1,33 @@
+[
+  {
+    "repository_id": 39996027,
+    "full_name": "vitorgalvao/custom-alfred-iterm-scripts",
+    "owner": "vitorgalvao",
+    "name": "custom-alfred-iterm-scripts",
+    "html_url": "https://github.com/vitorgalvao/custom-alfred-iterm-scripts",
+    "api_url": "https://api.github.com/repos/vitorgalvao/custom-alfred-iterm-scripts",
+    "description": "AppleScript for iTerm2 Alfred integration.",
+    "stars": 3795,
+    "forks": 433,
+    "watchers": 3795,
+    "open_issues": 0,
+    "primary_language": "AppleScript",
+    "topics": [
+      "alfred",
+      "iterm"
+    ],
+    "license": "BSD-3-Clause",
+    "default_branch": "master",
+    "archived": false,
+    "fork": false,
+    "created_at": "2015-07-31T08:48:03Z",
+    "updated_at": "2026-09-04T17:14:17Z",
+    "pushed_at": "2026-06-13T09:56:01Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [],
+    "popularity_band": "2k+",
+    "activity_status": "active"
+  }
+]

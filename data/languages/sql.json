@@ -1,0 +1,39 @@
+[
+  {
+    "repository_id": 859686186,
+    "full_name": "ben-nour/SQL-tips-and-tricks",
+    "owner": "ben-nour",
+    "name": "SQL-tips-and-tricks",
+    "html_url": "https://github.com/ben-nour/SQL-tips-and-tricks",
+    "api_url": "https://api.github.com/repos/ben-nour/SQL-tips-and-tricks",
+    "description": "SQL tips and tricks",
+    "stars": 2305,
+    "forks": 107,
+    "watchers": 2305,
+    "open_issues": 2,
+    "primary_language": "SQL",
+    "topics": [
+      "mysql",
+      "snowflake",
+      "sql",
+      "sqlite",
+      "tips",
+      "tips-and-tricks"
+    ],
+    "license": "MIT",
+    "default_branch": "main",
+    "archived": false,
+    "fork": false,
+    "created_at": "2024-09-19T05:29:04Z",
+    "updated_at": "2026-09-12T18:28:48Z",
+    "pushed_at": "2025-11-23T09:17:14Z",
+    "indexed_at": "2026-09-13T03:07:56Z",
+    "source": "github-public-api",
+    "dataset_version": "1.0.0",
+    "categories": [
+      "database"
+    ],
+    "popularity_band": "2k+",
+    "activity_status": "inactive"
+  }
+]
