@@ -43,7 +43,6 @@ export function DatasetStructuredData({ stats }) {
       name: "RepoSource Registry",
     },
     isAccessibleForFree: true,
-    license: "https://opensource.org/license/mit/",
   };
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
