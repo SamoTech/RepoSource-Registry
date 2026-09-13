@@ -1,5 +1,9 @@
+const siteUrl = "https://repo-source-registry.vercel.app";
+
 export default function sitemap() {
-  const base = process.env.SITE_URL ? process.env.SITE_URL.replace(/\/$/, "") : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null;
-  if (!base) return [];
-  return ["/", "/search", "/data"].map((path) => ({ url: `${base}${path}`, changeFrequency: path === "/" ? "weekly" : "monthly", priority: path === "/" ? 1 : 0.7 }));
+  return [
+    { url: siteUrl, changeFrequency: "weekly", priority: 1 },
+    { url: `${siteUrl}/search`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/data`, changeFrequency: "monthly", priority: 0.8 },
+  ];
 }

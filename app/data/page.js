@@ -5,17 +5,23 @@ export const metadata = { title: "Dataset", description: "RepoSource Registry pu
 export default async function DataPage() {
   const stats = await getStats();
   const resources = [
-    ["Canonical dataset", "The authoritative RepoSource Registry snapshot.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/repositories.json"],
+    ["Canonical dataset", "Primary machine-readable repository snapshot.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/repositories.json"],
     ["Schema", "JSON Schema for repository records.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/schema/repository.schema.json"],
-    ["Manifest", "Snapshot identity, versions, provenance, and hashes.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/manifest.json"],
-    ["Statistics", "Aggregate dataset statistics.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/statistics.json"],
+    ["Manifest", "Snapshot identity, versions, provenance, and integrity hashes.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/manifest.json"],
+    ["Statistics", "Aggregate counts and distributions for the snapshot.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/data/statistics.json"],
     ["Methodology", "Collection, normalization, validation, and limitations.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/docs/methodology.md"],
     ["Data dictionary", "Definitions for fields exposed by the registry.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/docs/data-dictionary.md"],
-    ["Agent orientation", "Compact guidance for automated consumers.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/llms.txt"],
+    ["Agent orientation", "Machine-readable guidance for automated consumers.", "https://github.com/SamoTech/RepoSource-Registry/blob/main/llms.txt"],
   ];
-  return <div className="shell page"><div className="section-kicker">PUBLIC DATA</div><h1>Dataset & provenance</h1><p className="lead small">The web interface is a convenience layer. The public dataset remains directly accessible from GitHub without an account or payment.</p>
-    <div className="data-summary"><div><span>Repositories</span><strong>{stats.repository_count.toLocaleString()}</strong></div><div><span>Generated</span><strong>{stats.generated_at}</strong></div><div><span>Minimum stars</span><strong>{stats.minimum_stars.toLocaleString()}+</strong></div></div>
-    <div className="resource-list">{resources.map(([title, desc, url]) => <a className="resource" href={url} key={title}><strong>{title}</strong><span>{desc}</span><small>{url.replace("https://github.com/SamoTech/RepoSource-Registry/blob/main/", "")}</small></a>)}</div>
-    <section className="detail-note"><strong>Trust model</strong><p>GitHub source → collection → normalization → validation → snapshot → public data → downstream use → upstream verification.</p><p>RepoSource Registry is a secondary snapshot. Stars, descriptions, topics, and other mutable values may differ from current GitHub state.</p></section>
+
+  return <div className="shell page">
+    <div className="section-kicker">PUBLIC DATA / ACCESS</div>
+    <div className="page-heading"><div><h1>Dataset & provenance</h1><p className="lead small">The website is a discovery layer. The public dataset remains directly accessible from GitHub without an account, payment, or API key.</p></div><div className="page-counter"><strong>1.0.0</strong><span>dataset version</span></div></div>
+
+    <div className="data-summary"><div><span>REPOSITORIES</span><strong>{stats.repository_count.toLocaleString()}</strong><small>accepted records</small></div><div><span>GENERATED</span><strong>{stats.generated_at}</strong><small>UTC snapshot</small></div><div><span>SCHEMA</span><strong>1.1.0</strong><small>repository schema</small></div></div>
+
+    <section className="access-panel"><div><span className="section-kicker">CANONICAL ACCESS</span><h2>Everything needed to consume the data.</h2><p>Use the canonical files for analysis, indexing, research, and downstream tooling. Each repository record retains an upstream GitHub reference.</p></div><div className="access-grid">{resources.map(([title, desc, url], index) => <a className="resource" href={url} key={title} rel="noreferrer"><span className="resource-index">{String(index + 1).padStart(2, "0")}</span><strong>{title}</strong><span>{desc}</span><small>{url.replace("https://github.com/SamoTech/RepoSource-Registry/blob/main/", "")}</small><b aria-hidden="true">↗</b></a>)}</div></section>
+
+    <section className="detail-note provenance-note"><span className="section-kicker">TRUST MODEL</span><strong>GitHub source → collection → normalization → validation → snapshot → public data → upstream verification.</strong><p>RepoSource Registry is a secondary snapshot. Stars, descriptions, topics, and other mutable values may differ from current GitHub state. Stars indicate popularity, not quality, security, or endorsement.</p></section>
   </div>;
 }
