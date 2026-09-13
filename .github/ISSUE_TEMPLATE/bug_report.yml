@@ -1,0 +1,35 @@
+---
+name: Bug report
+description: Report a reproducible problem in the website, tooling, or documentation.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep reports factual and reproducible. Do not include secrets or private information.
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Page, file, command, or workflow affected.
+      placeholder: app/search/page.js or /search
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include commands, snapshot/version, and relevant steps.

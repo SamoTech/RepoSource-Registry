@@ -1,0 +1,33 @@
+---
+name: Data issue
+description: Report missing, malformed, inconsistent, or unexpected registry metadata.
+title: "data: "
+labels: [data]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The registry is a snapshot. Include the exact snapshot/version when possible and distinguish snapshot values from current GitHub state.
+  - type: input
+    id: record
+    attributes:
+      label: Repository record
+      description: Full repository name if applicable.
+      placeholder: owner/repository
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      placeholder: primary_language
+  - type: textarea
+    id: issue
+    attributes:
+      label: Data issue
+      description: Explain what is wrong or missing.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include snapshot/version and upstream reference when relevant.

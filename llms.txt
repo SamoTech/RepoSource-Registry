@@ -4,6 +4,7 @@ RepoSource Registry is an open, derived GitHub repository discovery dataset and 
 
 ## Canonical resources
 - `data/repositories.json` — primary machine-readable registry
+- `data/repositories.csv` — tabular export
 - `data/manifest.json` — snapshot identity, versions, provenance, and integrity hashes
 - `data/statistics.json` — aggregate statistics
 - `schema/repository.schema.json` — JSON Schema for repository records
@@ -11,13 +12,14 @@ RepoSource Registry is an open, derived GitHub repository discovery dataset and 
 - `docs/catalog.md` — language and category discovery
 - `docs/data-dictionary.md` — field definitions
 - `docs/methodology.md` — collection and validation methodology
-- `docs/quickstart.md` — five-minute consumption guide
+- `docs/quickstart.md` — consumption guide
+- `CITATION.cff` — verified project citation metadata
 
 ## Interpretation
 - GitHub is the upstream source.
 - The registry is a snapshot, not real-time state.
 - The current inclusion policy is `stars >= 2000`.
-- Stars indicate popularity, not quality, security, or endorsement.
+- Stars indicate popularity, not quality, security, maintenance, or endorsement.
 - `categories`, `popularity_band`, and `activity_status` are RepoSource-derived fields.
 - Use `html_url` in each record as the upstream reference for individual repositories.
 - Do not infer missing facts.
@@ -30,7 +32,13 @@ RepoSource Registry is an open, derived GitHub repository discovery dataset and 
 4. Consume `data/repositories.json` or a focused partition.
 5. Use `data/statistics.json` for aggregate claims.
 6. Verify consequential current facts against GitHub.
-7. Record the snapshot timestamp when citing registry-derived results.
+7. Record the snapshot timestamp, version, and hash when citing registry-derived results.
+
+## Downstream uses
+The dataset can support repository discovery, language/topic exploration, local indexes, analytics, research, developer tooling, and retrieval/RAG workflows. Keep derived indexes and analysis outputs separate from the canonical dataset.
 
 ## Commercial boundary
-The canonical public dataset remains open. RepoSource Registry does not use paid API access as a monetization strategy. Commercial opportunities are limited to sponsorship, professional engineering and integration, custom research/data work, analytics, support, and hosted experiences built around the open data.
+The canonical public dataset remains open and directly consumable. Commercial opportunities are limited to sponsorship, professional engineering and integration, custom research/data work, analytics, support, developer tooling, and hosted experiences built around the open data. Access to the public dataset is not sold or restricted by request volume.
+
+## Documentation
+See `docs/developer-adoption.md`, `docs/data-engineering.md`, `docs/ai-rag.md`, `docs/analytics.md`, `docs/research.md`, `docs/reproducibility.md`, `docs/citation.md`, `docs/data-quality.md`, `docs/community-growth.md`, `docs/outreach.md`, `docs/content-strategy.md`, `docs/feedback.md`, `docs/research-partnerships.md`, and `docs/services.md`.

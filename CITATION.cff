@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use RepoSource Registry, please cite the project and identify the exact dataset snapshot used."
+title: "RepoSource Registry"
+type: software
+version: "1.0.0"
+date-released: 2026-09-13
+url: "https://github.com/SamoTech/RepoSource-Registry"
+repository-code: "https://github.com/SamoTech/RepoSource-Registry"
+license: MIT
+authors:
+  - name: SamoTech
+keywords:
+  - GitHub
+  - repository metadata
+  - open data
+  - dataset
+  - developer tooling
+  - reproducibility

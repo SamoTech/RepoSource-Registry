@@ -1,0 +1,28 @@
+---
+name: Research use case
+description: Propose a reproducible research question or analysis using the registry.
+title: "research: "
+labels: [research]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data needed
+      description: Identify fields, partitions, or snapshot requirements.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed method
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected public output
+      description: Report, notebook, example, or derived analysis.

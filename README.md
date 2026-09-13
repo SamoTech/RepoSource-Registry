@@ -99,6 +99,26 @@ For a five-minute integration path, see [`docs/quickstart.md`](docs/quickstart.m
 
 See [`docs/data-dictionary.md`](docs/data-dictionary.md) for fields and [`docs/catalog.md`](docs/catalog.md) for discovery partitions.
 
+## Developer, research, and integration paths
+
+- [`docs/quickstart.md`](docs/quickstart.md) — consume the dataset quickly.
+- [`docs/developer-adoption.md`](docs/developer-adoption.md) — downstream adoption experiments.
+- [`docs/data-engineering.md`](docs/data-engineering.md) — ETL, validation, indexing, and interoperability.
+- [`docs/ai-rag.md`](docs/ai-rag.md) — retrieval and RAG integration patterns.
+- [`docs/analytics.md`](docs/analytics.md) — factual descriptive analysis patterns.
+- [`docs/research.md`](docs/research.md) — research questions and limitations.
+- [`docs/reproducibility.md`](docs/reproducibility.md) — snapshot-based reproducibility.
+- [`docs/citation.md`](docs/citation.md) — citation guidance.
+- [`docs/data-quality.md`](docs/data-quality.md) — validation and known limitations.
+- [`docs/showcase.md`](docs/showcase.md) — future community showcase criteria.
+- [`docs/community-growth.md`](docs/community-growth.md) — contribution and community growth model.
+- [`docs/outreach.md`](docs/outreach.md) — maintainer-to-maintainer outreach guidance.
+- [`docs/content-strategy.md`](docs/content-strategy.md) — technical content priorities.
+- [`docs/feedback.md`](docs/feedback.md) — data, documentation, and UX feedback.
+- [`docs/research-partnerships.md`](docs/research-partnerships.md) — collaboration model.
+- [`docs/services.md`](docs/services.md) — professional services around the open data.
+- [`docs/sponsoring.md`](docs/sponsoring.md) — sponsorship and independence.
+
 ## AI and data-agent usage
 
 Automated consumers should:
@@ -118,14 +138,7 @@ The project makes no claims of AI endorsement, certification, indexing, or offic
 
 The public web layer uses Next.js App Router and server-rendered pages. It reads the existing canonical snapshot and statistics from the public GitHub distribution with revalidation caching; it does not create a database or regenerate the dataset during deployment.
 
-The interface provides:
-
-- repository search across the published snapshot;
-- language, category, and minimum-star filters;
-- repository detail views;
-- direct upstream GitHub links;
-- dataset, schema, manifest, and methodology navigation;
-- generated robots and sitemap metadata when a deployment origin is available.
+The interface provides repository search, language/category/star filters, repository detail views, upstream GitHub links, and direct dataset/schema/manifest/methodology navigation.
 
 See [`docs/vercel.md`](docs/vercel.md) for architecture, deployment, caching, security, and limitations.
 
@@ -137,7 +150,7 @@ The scheduled collection process uses GitHub repository Search API results and t
 
 GitHub is the primary source for current repository facts. RepoSource Registry is a structured secondary snapshot.
 
-See [`docs/methodology.md`](docs/methodology.md).
+See [`docs/methodology.md`](docs/methodology.md) and [`docs/data-quality.md`](docs/data-quality.md).
 
 ## Freshness and limitations
 
@@ -145,52 +158,17 @@ The scheduled update workflow targets a weekly snapshot. The registry is not rea
 
 Repositories below the configured star threshold are excluded. GitHub Search semantics and repository metadata can change. Stars are a popularity signal, not a measure of quality, security, maintenance, or endorsement. Language/topic metadata can be missing or inconsistent upstream, and RepoSource categories are derived labels rather than GitHub-native labels.
 
-## Documentation
+## Open-data commercial boundary
 
-- [`docs/quickstart.md`](docs/quickstart.md) — use the dataset in five minutes.
-- [`docs/use-cases.md`](docs/use-cases.md) — downstream applications and limitations.
-- [`docs/catalog.md`](docs/catalog.md) — language and category discovery.
-- [`docs/data-dictionary.md`](docs/data-dictionary.md) — field definitions.
-- [`docs/methodology.md`](docs/methodology.md) — collection and validation methodology.
-- [`docs/product-positioning.md`](docs/product-positioning.md) — product definition.
-- [`docs/roadmap.md`](docs/roadmap.md) — staged roadmap.
-- [`docs/vercel.md`](docs/vercel.md) — public discovery deployment.
-- [`docs/first-users.md`](docs/first-users.md) — evidence-driven first-user experiments.
-- [`docs/sponsoring.md`](docs/sponsoring.md) — community support.
-- [`docs/corporate-sponsorship.md`](docs/corporate-sponsorship.md) — corporate support.
-- [`docs/services.md`](docs/services.md) — professional services.
-- [`docs/monetization.md`](docs/monetization.md) — open-data commercial boundaries.
-- [`docs/commercial-use.md`](docs/commercial-use.md) — commercial-use guidance.
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution workflow.
-- [`SECURITY.md`](SECURITY.md) — security reporting.
+The canonical dataset remains public and directly consumable. There is no paid access tier and no monetization based on dataset request volume.
 
-## Sponsoring and commercial work
+Commercial value is created around the open data through engineering, integration, custom research, analytics, AI/RAG implementation, developer tooling, hosted custom experiences, consulting, and sponsorship. Sponsor identity does not influence inclusion, ranking, classification, or data integrity.
 
-The public dataset remains open and useful independently of sponsorship or commercial services. Sponsorship supports maintenance, validation, CI, documentation, public indexes, research infrastructure, and developer tooling.
-
-Commercial opportunities are intentionally around the open data: consulting, integration, custom data engineering, AI/RAG integration, custom research, analytics, hosted discovery experiences, reporting, and implementation support.
-
-The project does not monetize access to the canonical dataset, request volume, or restricted data tiers. Revenue, if achieved, comes from sponsorship, expertise, implementation, customization, research, analytics, or hosted convenience around the open data.
-
-See [`docs/sponsoring.md`](docs/sponsoring.md), [`docs/services.md`](docs/services.md), and [`docs/monetization.md`](docs/monetization.md).
-
-## Roadmap
-
-**Now:** dependable public data, validation, documentation, reproducibility, and discovery.
-
-**Next:** stronger static indexes, examples, integrations, and contributor tooling based on real usage.
-
-**Later:** historical snapshots, trends, similarity, recommendations, and richer research tooling where justified.
-
-**Future:** hosted discovery, analytics, organization intelligence, and commercial integrations around the open dataset.
-
-No roadmap stage depends on restricting access to the public dataset.
+See [`docs/services.md`](docs/services.md), [`docs/sponsoring.md`](docs/sponsoring.md), and [`docs/monetization.md`](docs/monetization.md).
 
 ## Citation
 
-For reproducible work, cite the project together with the snapshot timestamp, dataset version, and canonical data file. For individual repositories, use the record's `html_url` as the upstream reference.
-
-A `CITATION.cff` file is not currently published because verified citation metadata is not yet available in the repository.
+For reproducible work, cite the project together with the snapshot timestamp, dataset version, schema version when relevant, and canonical data file. A verified [`CITATION.cff`](CITATION.cff) is included for project citation metadata. For individual repositories, use the record's `html_url` as the upstream reference.
 
 ## License
 

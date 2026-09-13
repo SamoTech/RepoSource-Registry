@@ -85,6 +85,15 @@ export default async function Home() {
         </div>
         <div className="fresh"><span>Latest generated snapshot</span><strong>{stats.generated_at}</strong><small>Registry data is not live GitHub state.</small></div>
       </section>
+
+      <section className="shell section data-strip">
+        <div className="section-kicker">BUILD / RESEARCH / EXTEND</div>
+        <div className="data-strip-grid">
+          <div><Link href="https://github.com/SamoTech/RepoSource-Registry/blob/main/docs/quickstart.md" className="plain-link"><strong>Build</strong><span>Load the public snapshot, use focused partitions, and start a local analysis.</span></Link></div>
+          <div><Link href="https://github.com/SamoTech/RepoSource-Registry/blob/main/docs/research.md" className="plain-link"><strong>Research</strong><span>Use documented snapshots for ecosystem analysis and reproducible work.</span></Link></div>
+          <div><Link href="https://github.com/SamoTech/RepoSource-Registry/blob/main/docs/services.md" className="plain-link"><strong>Extend</strong><span>Explore engineering, integration, analytics, and research services around the open data.</span></Link></div>
+        </div>
+      </section>
     </div>
   );
 }
