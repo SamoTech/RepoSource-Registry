@@ -55,7 +55,7 @@ class GeneratorTests(unittest.TestCase):
         beyond_boundary = {
             "topics": [],
             "stars": 2000,
-            "pushed_at": "2025-07-04T23:59:59Z",
+            "pushed_at": "2025-07-04T00:00:00Z",
         }
         self.assertEqual(
             generate_list.classify(copy.deepcopy(exactly_boundary), self.cfg, self.reference_time)["activity_status"],
