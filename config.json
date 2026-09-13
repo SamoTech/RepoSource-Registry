@@ -1,0 +1,19 @@
+{
+  "min_stars": 2000,
+  "include_forks": false,
+  "include_archived": true,
+  "per_page": 100,
+  "request_timeout_seconds": 30,
+  "max_retries": 5,
+  "dataset_version": "1.0.0",
+  "output_formats": ["json", "csv", "markdown"],
+  "categories": {
+    "ai": ["ai", "artificial-intelligence", "machine-learning", "deep-learning", "llm", "generative-ai"],
+    "web": ["web", "web-development", "frontend", "backend", "full-stack", "react", "vue", "angular"],
+    "devops": ["devops", "docker", "kubernetes", "terraform", "ci", "cd", "infrastructure"],
+    "database": ["database", "databases", "sql", "nosql", "postgresql", "mysql", "redis"],
+    "security": ["security", "cybersecurity", "infosec", "privacy", "cryptography"],
+    "developer-tools": ["developer-tools", "cli", "development-tools", "tooling", "sdk", "ide"],
+    "networking": ["networking", "network", "proxy", "vpn", "dns"]
+  }
+}
