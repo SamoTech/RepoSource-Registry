@@ -7,7 +7,10 @@ export async function generateMetadata({ params }) {
   const { owner, name } = await params;
   const dataset = await getDataset();
   const repo = findRepository(dataset.repositories || [], owner, name);
-  return { title: repo ? repo.full_name : "Repository not found", description: repo?.description || "RepoSource Registry repository snapshot." };
+  const canonical = `https://repo-source-registry.vercel.app/repo/${encodeURIComponent(owner)}/${encodeURIComponent(name)}`;
+  return repo
+    ? { title: repo.full_name, description: repo.description || `RepoSource Registry snapshot for ${repo.full_name}.`, alternates: { canonical } }
+    : { title: "Repository not found", description: "The repository is not present in the current RepoSource Registry snapshot.", alternates: { canonical }, robots: { index: false, follow: false } };
 }
 
 export default async function RepositoryPage({ params }) {
