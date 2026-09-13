@@ -5,6 +5,13 @@ export const dynamic = "force-dynamic";
 
 export const metadata = { title: "Discover repositories", description: "Search and filter the RepoSource Registry snapshot." };
 
+function heatClass(band) {
+  const value = String(band || "").toLowerCase();
+  if (value.includes("50k")) return "heat-hot";
+  if (value.includes("10k") || value.includes("5k")) return "heat-warm";
+  return "heat-cold";
+}
+
 export default async function SearchPage({ searchParams }) {
   const params = await searchParams;
   const q = params?.q || "";
@@ -29,9 +36,9 @@ export default async function SearchPage({ searchParams }) {
     </form>
     <p className="result-count">{results.length ? `Showing ${results.length} matching result${results.length === 1 ? "" : "s"}` : "No matching repositories"}</p>
     <div className="results">{results.map(repo => <article className="repo-card" key={repo.repository_id}>
-      <div className="repo-head"><Link href={`/repo/${encodeURIComponent(repo.owner || repo.full_name.split("/")[0])}/${encodeURIComponent(repo.name || repo.full_name.split("/").pop())}`}><h2>{repo.full_name}</h2></Link><span className="stars">★ {repo.stars.toLocaleString()}</span></div>
+      <div className="repo-head"><Link href={`/repo/${encodeURIComponent(repo.owner || repo.full_name.split("/")[0])}/${encodeURIComponent(repo.name || repo.full_name.split("/").pop())}`}><h2>{repo.full_name}</h2></Link><span className={heatClass(repo.popularity_band) + " heat-tag"}>{repo.popularity_band || "2k+"} · popularity</span></div>
       <p>{repo.description || "No description provided in the snapshot."}</p>
-      <div className="meta"><span>{repo.primary_language || "No declared language"}</span><span>{repo.popularity_band}</span>{(repo.topics || []).slice(0, 4).map(t => <span key={t}>{t}</span>)}</div>
+      <div className="meta"><span>★ {repo.stars.toLocaleString()}</span><span>{repo.primary_language || "No declared language"}</span>{(repo.topics || []).slice(0, 4).map(t => <span key={t}>{t}</span>)}</div>
       <a className="upstream" href={repo.html_url} rel="noreferrer">View on GitHub ↗</a>
     </article>)}</div>
     <p className="disclaimer">Snapshot: {stats.generated_at}. GitHub is the upstream source for current repository facts.</p>

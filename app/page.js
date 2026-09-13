@@ -12,14 +12,19 @@ export default async function Home() {
     <div>
       <section className="hero shell">
         <div className="eyebrow">OPEN DATA · REPRODUCIBLE SNAPSHOT</div>
-        <h1>Find repositories without rebuilding the search layer.</h1>
-        <p className="lead">RepoSource Registry is an open, machine-readable GitHub repository discovery dataset for developers, researchers, AI/data applications, and open-source tooling.</p>
+        <h1>Discover the repositories shaping open source.</h1>
+        <p className="lead">RepoSource Registry is an open, machine-readable GitHub repository discovery dataset for developers, researchers, and open-source tooling.</p>
         <form action="/search" className="searchbar">
           <label htmlFor="q" className="sr-only">Search repositories</label>
           <input id="q" name="q" placeholder="Search repositories, owners, descriptions, or topics" />
           <button type="submit">Discover repositories</button>
         </form>
         <p className="note">Registry values are a snapshot. Verify important current facts on GitHub.</p>
+        <div className="thermal-panel" aria-label="Repository popularity temperature scale">
+          <div className="thermal-head"><strong>Popularity temperature</strong><span>cold → hot · visual scale</span></div>
+          <div className="thermal-scale" aria-hidden="true" />
+          <div className="thermal-labels"><span className="cold">2K° · baseline</span><span className="hot">50K°+ · hot</span></div>
+        </div>
       </section>
 
       <section className="shell stats" aria-label="Dataset statistics">

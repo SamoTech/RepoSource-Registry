@@ -3,6 +3,13 @@ import { getDataset, getStats, findRepository } from "../../../../lib/registry";
 
 export const dynamic = "force-dynamic";
 
+function heatClass(band) {
+  const value = String(band || "").toLowerCase();
+  if (value.includes("50k")) return "heat-hot";
+  if (value.includes("10k") || value.includes("5k")) return "heat-warm";
+  return "heat-cold";
+}
+
 export async function generateMetadata({ params }) {
   const { owner, name } = await params;
   const dataset = await getDataset();
@@ -33,7 +40,7 @@ export default async function RepositoryPage({ params }) {
       <div className="section-kicker">REGISTRY SNAPSHOT</div>
       <h1>{repo.full_name}</h1>
       <p className="lead small">{repo.description || "No description provided in the snapshot."}</p>
-      <div className="actions"><a className="button" href={repo.html_url} rel="noreferrer">View on GitHub ↗</a></div>
+      <div className="actions"><a className="button" href={repo.html_url} rel="noreferrer">View on GitHub ↗</a><span className={heatClass(repo.popularity_band) + " heat-tag"}>{repo.popularity_band || "2k+"} · popularity</span></div>
       <dl className="facts">{fields.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
       <div className="topic-list">{(repo.topics || []).map(topic => <span key={topic}>{topic}</span>)}</div>
       <section className="detail-note"><strong>Verification</strong><p>This page reflects the RepoSource Registry snapshot generated at {stats.generated_at}. GitHub remains the primary source for current repository facts.</p></section>
