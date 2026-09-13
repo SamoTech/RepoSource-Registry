@@ -1,6 +1,11 @@
+import { DatasetStructuredData } from "../seo-schema";
 import { getStats } from "../../lib/registry";
 
-export const metadata = { title: "Dataset", description: "RepoSource Registry public dataset, provenance, schema, and access points." };
+export const metadata = {
+  title: "GitHub Repository Dataset",
+  description: "Open, machine-readable GitHub repository discovery dataset with provenance, schema, snapshot metadata, and direct public access.",
+  alternates: { canonical: "https://repo-source-registry.vercel.app/data" },
+};
 
 export default async function DataPage() {
   const stats = await getStats();
@@ -15,6 +20,7 @@ export default async function DataPage() {
   ];
 
   return <div className="shell page">
+    <DatasetStructuredData stats={stats} />
     <div className="section-kicker">PUBLIC DATA / ACCESS</div>
     <div className="page-heading"><div><h1>Dataset & provenance</h1><p className="lead small">The website is a discovery layer. The public dataset remains directly accessible from GitHub without an account, payment, or API key.</p></div><div className="page-counter"><strong>1.0.0</strong><span>dataset version</span></div></div>
 
