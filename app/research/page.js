@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getStats } from "../lib/registry";
+import { getStats } from "../../lib/registry";
 
 const siteUrl = "https://repo-source-registry.vercel.app";
 const githubBase = "https://github.com/SamoTech/RepoSource-Registry/blob/main/";
