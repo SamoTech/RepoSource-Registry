@@ -1,36 +1,42 @@
-[
-  {
-    "repository_id": 143040428,
-    "full_name": "github/codeql",
-    "owner": "github",
-    "name": "codeql",
-    "html_url": "https://github.com/github/codeql",
-    "api_url": "https://api.github.com/repos/github/codeql",
-    "description": "CodeQL: the libraries and queries that power security researchers around the world, as well as code scanning in GitHub Advanced Security",
-    "stars": 10083,
-    "forks": 2083,
-    "watchers": 10083,
-    "open_issues": 1461,
-    "primary_language": "CodeQL",
-    "topics": [
-      "codeql",
-      "github-advanced-security",
-      "github-security-lab",
-      "semmle-ql",
-      "works-with-codespaces"
-    ],
-    "license": "MIT",
-    "default_branch": "main",
-    "archived": false,
-    "fork": false,
-    "created_at": "2018-07-31T16:35:51Z",
-    "updated_at": "2026-09-12T21:40:12Z",
-    "pushed_at": "2026-09-12T21:38:33Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "10k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "CodeQL",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 143040428,
+      "full_name": "github/codeql",
+      "owner": "github",
+      "name": "codeql",
+      "html_url": "https://github.com/github/codeql",
+      "api_url": "https://api.github.com/repos/github/codeql",
+      "description": "CodeQL: the libraries and queries that power security researchers around the world, as well as code scanning in GitHub Advanced Security",
+      "stars": 10083,
+      "forks": 2083,
+      "watchers": 10083,
+      "open_issues": 1461,
+      "primary_language": "CodeQL",
+      "topics": [
+        "codeql",
+        "github-advanced-security",
+        "github-security-lab",
+        "semmle-ql",
+        "works-with-codespaces"
+      ],
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "created_at": "2018-07-31T16:35:51Z",
+      "updated_at": "2026-09-12T21:40:12Z",
+      "pushed_at": "2026-09-12T21:38:33Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-12T21:40:12Z",
+      "categories": [],
+      "popularity_band": "10k+",
+      "activity_status": "active"
+    }
+  ]
+}

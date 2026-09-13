@@ -1,30 +1,36 @@
-[
-  {
-    "repository_id": 161455005,
-    "full_name": "alibaba/x-deeplearning",
-    "owner": "alibaba",
-    "name": "x-deeplearning",
-    "html_url": "https://github.com/alibaba/x-deeplearning",
-    "api_url": "https://api.github.com/repos/alibaba/x-deeplearning",
-    "description": "An industrial deep learning framework for high-dimension sparse data",
-    "stars": 4301,
-    "forks": 1024,
-    "watchers": 4301,
-    "open_issues": 126,
-    "primary_language": "PureBasic",
-    "topics": [],
-    "license": "Apache-2.0",
-    "default_branch": "master",
-    "archived": false,
-    "fork": false,
-    "created_at": "2018-12-12T08:18:26Z",
-    "updated_at": "2026-09-07T02:48:11Z",
-    "pushed_at": "2024-09-25T14:42:15Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "2k+",
-    "activity_status": "inactive"
-  }
-]
+{
+  "language": "PureBasic",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 161455005,
+      "full_name": "alibaba/x-deeplearning",
+      "owner": "alibaba",
+      "name": "x-deeplearning",
+      "html_url": "https://github.com/alibaba/x-deeplearning",
+      "api_url": "https://api.github.com/repos/alibaba/x-deeplearning",
+      "description": "An industrial deep learning framework for high-dimension sparse data",
+      "stars": 4301,
+      "forks": 1024,
+      "watchers": 4301,
+      "open_issues": 126,
+      "primary_language": "PureBasic",
+      "topics": [],
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "fork": false,
+      "created_at": "2018-12-12T08:18:26Z",
+      "updated_at": "2026-09-07T02:48:11Z",
+      "pushed_at": "2024-09-25T14:42:15Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-07T02:48:11Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "inactive"
+    }
+  ]
+}

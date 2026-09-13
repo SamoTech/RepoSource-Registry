@@ -1,38 +1,44 @@
-[
-  {
-    "repository_id": 147545986,
-    "full_name": "plantuml-stdlib/C4-PlantUML",
-    "owner": "plantuml-stdlib",
-    "name": "C4-PlantUML",
-    "html_url": "https://github.com/plantuml-stdlib/C4-PlantUML",
-    "api_url": "https://api.github.com/repos/plantuml-stdlib/C4-PlantUML",
-    "description": "C4-PlantUML combines the benefits of PlantUML and the C4 model for providing a simple way of describing and communicate software architectures",
-    "stars": 7405,
-    "forks": 1170,
-    "watchers": 7405,
-    "open_issues": 0,
-    "primary_language": "PlantUML",
-    "topics": [
-      "architecture",
-      "c4",
-      "c4model",
-      "diagram",
-      "graphviz",
-      "plantuml",
-      "uml"
-    ],
-    "license": "MIT",
-    "default_branch": "master",
-    "archived": false,
-    "fork": false,
-    "created_at": "2018-09-05T16:12:47Z",
-    "updated_at": "2026-09-12T15:49:21Z",
-    "pushed_at": "2026-08-26T14:58:27Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "5k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "PlantUML",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 147545986,
+      "full_name": "plantuml-stdlib/C4-PlantUML",
+      "owner": "plantuml-stdlib",
+      "name": "C4-PlantUML",
+      "html_url": "https://github.com/plantuml-stdlib/C4-PlantUML",
+      "api_url": "https://api.github.com/repos/plantuml-stdlib/C4-PlantUML",
+      "description": "C4-PlantUML combines the benefits of PlantUML and the C4 model for providing a simple way of describing and communicate software architectures",
+      "stars": 7405,
+      "forks": 1170,
+      "watchers": 7405,
+      "open_issues": 0,
+      "primary_language": "PlantUML",
+      "topics": [
+        "architecture",
+        "c4",
+        "c4model",
+        "diagram",
+        "graphviz",
+        "plantuml",
+        "uml"
+      ],
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "fork": false,
+      "created_at": "2018-09-05T16:12:47Z",
+      "updated_at": "2026-09-12T15:49:21Z",
+      "pushed_at": "2026-08-26T14:58:27Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-12T15:49:21Z",
+      "categories": [],
+      "popularity_band": "5k+",
+      "activity_status": "active"
+    }
+  ]
+}

@@ -1,38 +1,44 @@
-[
-  {
-    "repository_id": 14509809,
-    "full_name": "wren-lang/wren",
-    "owner": "wren-lang",
-    "name": "wren",
-    "html_url": "https://github.com/wren-lang/wren",
-    "api_url": "https://api.github.com/repos/wren-lang/wren",
-    "description": "The Wren Programming Language. Wren is a small, fast, class-based concurrent scripting language.",
-    "stars": 8129,
-    "forks": 632,
-    "watchers": 8129,
-    "open_issues": 272,
-    "primary_language": "Wren",
-    "topics": [
-      "bytecode",
-      "c",
-      "fibers",
-      "interpreter",
-      "language",
-      "scripting-languages",
-      "wren"
-    ],
-    "license": "MIT",
-    "default_branch": "main",
-    "archived": false,
-    "fork": false,
-    "created_at": "2013-11-19T00:43:45Z",
-    "updated_at": "2026-09-12T11:52:58Z",
-    "pushed_at": "2025-11-19T22:18:55Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "5k+",
-    "activity_status": "inactive"
-  }
-]
+{
+  "language": "Wren",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 14509809,
+      "full_name": "wren-lang/wren",
+      "owner": "wren-lang",
+      "name": "wren",
+      "html_url": "https://github.com/wren-lang/wren",
+      "api_url": "https://api.github.com/repos/wren-lang/wren",
+      "description": "The Wren Programming Language. Wren is a small, fast, class-based concurrent scripting language.",
+      "stars": 8129,
+      "forks": 632,
+      "watchers": 8129,
+      "open_issues": 272,
+      "primary_language": "Wren",
+      "topics": [
+        "bytecode",
+        "c",
+        "fibers",
+        "interpreter",
+        "language",
+        "scripting-languages",
+        "wren"
+      ],
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "created_at": "2013-11-19T00:43:45Z",
+      "updated_at": "2026-09-12T11:52:58Z",
+      "pushed_at": "2025-11-19T22:18:55Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-12T11:52:58Z",
+      "categories": [],
+      "popularity_band": "5k+",
+      "activity_status": "inactive"
+    }
+  ]
+}

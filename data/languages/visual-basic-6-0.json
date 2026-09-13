@@ -1,39 +1,45 @@
-[
-  {
-    "repository_id": 4917029,
-    "full_name": "tannerhelland/PhotoDemon",
-    "owner": "tannerhelland",
-    "name": "PhotoDemon",
-    "html_url": "https://github.com/tannerhelland/PhotoDemon",
-    "api_url": "https://api.github.com/repos/tannerhelland/PhotoDemon",
-    "description": "A free portable photo editor focused on pro-grade features, high performance, and maximum usability.",
-    "stars": 2346,
-    "forks": 250,
-    "watchers": 2346,
-    "open_issues": 56,
-    "primary_language": "Visual Basic 6.0",
-    "topics": [
-      "computer-vision",
-      "image-editor",
-      "image-filters",
-      "image-processing",
-      "paint",
-      "photo-editor",
-      "vb6",
-      "win32"
-    ],
-    "license": "NOASSERTION",
-    "default_branch": "main",
-    "archived": false,
-    "fork": false,
-    "created_at": "2012-07-05T23:43:00Z",
-    "updated_at": "2026-09-12T20:10:57Z",
-    "pushed_at": "2026-08-18T17:17:58Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "2k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "Visual Basic 6.0",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 4917029,
+      "full_name": "tannerhelland/PhotoDemon",
+      "owner": "tannerhelland",
+      "name": "PhotoDemon",
+      "html_url": "https://github.com/tannerhelland/PhotoDemon",
+      "api_url": "https://api.github.com/repos/tannerhelland/PhotoDemon",
+      "description": "A free portable photo editor focused on pro-grade features, high performance, and maximum usability.",
+      "stars": 2346,
+      "forks": 250,
+      "watchers": 2346,
+      "open_issues": 56,
+      "primary_language": "Visual Basic 6.0",
+      "topics": [
+        "computer-vision",
+        "image-editor",
+        "image-filters",
+        "image-processing",
+        "paint",
+        "photo-editor",
+        "vb6",
+        "win32"
+      ],
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "created_at": "2012-07-05T23:43:00Z",
+      "updated_at": "2026-09-12T20:10:57Z",
+      "pushed_at": "2026-08-18T17:17:58Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-12T20:10:57Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "active"
+    }
+  ]
+}

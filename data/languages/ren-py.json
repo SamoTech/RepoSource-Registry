@@ -1,36 +1,42 @@
-[
-  {
-    "repository_id": 4815490,
-    "full_name": "renpy/renpy",
-    "owner": "renpy",
-    "name": "renpy",
-    "html_url": "https://github.com/renpy/renpy",
-    "api_url": "https://api.github.com/repos/renpy/renpy",
-    "description": "The Ren'Py Visual Novel Engine",
-    "stars": 6816,
-    "forks": 933,
-    "watchers": 6816,
-    "open_issues": 294,
-    "primary_language": "Ren'Py",
-    "topics": [
-      "game-engine",
-      "python",
-      "renpy",
-      "visual-novel",
-      "visual-novel-engine"
-    ],
-    "license": null,
-    "default_branch": "master",
-    "archived": false,
-    "fork": false,
-    "created_at": "2012-06-28T01:21:22Z",
-    "updated_at": "2026-09-13T03:18:08Z",
-    "pushed_at": "2026-09-13T03:18:02Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "5k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "Ren'Py",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 4815490,
+      "full_name": "renpy/renpy",
+      "owner": "renpy",
+      "name": "renpy",
+      "html_url": "https://github.com/renpy/renpy",
+      "api_url": "https://api.github.com/repos/renpy/renpy",
+      "description": "The Ren'Py Visual Novel Engine",
+      "stars": 6816,
+      "forks": 933,
+      "watchers": 6816,
+      "open_issues": 294,
+      "primary_language": "Ren'Py",
+      "topics": [
+        "game-engine",
+        "python",
+        "renpy",
+        "visual-novel",
+        "visual-novel-engine"
+      ],
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "fork": false,
+      "created_at": "2012-06-28T01:21:22Z",
+      "updated_at": "2026-09-13T03:18:08Z",
+      "pushed_at": "2026-09-13T03:18:02Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-13T03:18:08Z",
+      "categories": [],
+      "popularity_band": "5k+",
+      "activity_status": "active"
+    }
+  ]
+}

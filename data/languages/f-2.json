@@ -1,0 +1,50 @@
+{
+  "language": "F*",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 18411972,
+      "full_name": "FStarLang/FStar",
+      "owner": "FStarLang",
+      "name": "FStar",
+      "html_url": "https://github.com/FStarLang/FStar",
+      "api_url": "https://api.github.com/repos/FStarLang/FStar",
+      "description": "A Proof-oriented Programming Language",
+      "stars": 3104,
+      "forks": 265,
+      "watchers": 3104,
+      "open_issues": 595,
+      "primary_language": "F*",
+      "topics": [
+        "c-language",
+        "dependent-types",
+        "dijkstra-monads",
+        "f-sharp",
+        "fstar",
+        "interactive-theorem-proving",
+        "ocaml",
+        "program-proof",
+        "programming-language",
+        "proof-assistant",
+        "smt",
+        "theorem-proving",
+        "verification"
+      ],
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "fork": false,
+      "created_at": "2014-04-03T17:32:49Z",
+      "updated_at": "2026-09-10T01:25:50Z",
+      "pushed_at": "2026-09-12T06:59:26Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-10T01:25:50Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "active"
+    }
+  ]
+}

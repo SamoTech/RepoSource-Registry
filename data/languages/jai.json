@@ -1,30 +1,36 @@
-[
-  {
-    "repository_id": 630793451,
-    "full_name": "focus-editor/focus",
-    "owner": "focus-editor",
-    "name": "focus",
-    "html_url": "https://github.com/focus-editor/focus",
-    "api_url": "https://api.github.com/repos/focus-editor/focus",
-    "description": "A simple and fast text editor",
-    "stars": 2682,
-    "forks": 147,
-    "watchers": 2682,
-    "open_issues": 126,
-    "primary_language": "Jai",
-    "topics": [],
-    "license": "GPL-3.0",
-    "default_branch": "main",
-    "archived": false,
-    "fork": false,
-    "created_at": "2023-04-21T07:03:17Z",
-    "updated_at": "2026-09-10T17:00:35Z",
-    "pushed_at": "2026-09-12T08:05:22Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "2k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "Jai",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 630793451,
+      "full_name": "focus-editor/focus",
+      "owner": "focus-editor",
+      "name": "focus",
+      "html_url": "https://github.com/focus-editor/focus",
+      "api_url": "https://api.github.com/repos/focus-editor/focus",
+      "description": "A simple and fast text editor",
+      "stars": 2682,
+      "forks": 147,
+      "watchers": 2682,
+      "open_issues": 126,
+      "primary_language": "Jai",
+      "topics": [],
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "created_at": "2023-04-21T07:03:17Z",
+      "updated_at": "2026-09-10T17:00:35Z",
+      "pushed_at": "2026-09-12T08:05:22Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-10T17:00:35Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "active"
+    }
+  ]
+}

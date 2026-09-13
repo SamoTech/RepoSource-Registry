@@ -1,39 +1,45 @@
-[
-  {
-    "repository_id": 37299718,
-    "full_name": "flix/flix",
-    "owner": "flix",
-    "name": "flix",
-    "html_url": "https://github.com/flix/flix",
-    "api_url": "https://api.github.com/repos/flix/flix",
-    "description": "The Flix Programming Language",
-    "stars": 2739,
-    "forks": 191,
-    "watchers": 2739,
-    "open_issues": 409,
-    "primary_language": "Flix",
-    "topics": [
-      "flix",
-      "functional",
-      "hacktoberfest",
-      "imperative",
-      "jvm",
-      "language",
-      "logic",
-      "programming-language"
-    ],
-    "license": "NOASSERTION",
-    "default_branch": "master",
-    "archived": false,
-    "fork": false,
-    "created_at": "2015-06-12T03:20:35Z",
-    "updated_at": "2026-09-12T19:46:11Z",
-    "pushed_at": "2026-09-12T20:27:06Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "2k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "Flix",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 37299718,
+      "full_name": "flix/flix",
+      "owner": "flix",
+      "name": "flix",
+      "html_url": "https://github.com/flix/flix",
+      "api_url": "https://api.github.com/repos/flix/flix",
+      "description": "The Flix Programming Language",
+      "stars": 2739,
+      "forks": 191,
+      "watchers": 2739,
+      "open_issues": 408,
+      "primary_language": "Flix",
+      "topics": [
+        "flix",
+        "functional",
+        "hacktoberfest",
+        "imperative",
+        "jvm",
+        "language",
+        "logic",
+        "programming-language"
+      ],
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "fork": false,
+      "created_at": "2015-06-12T03:20:35Z",
+      "updated_at": "2026-09-13T05:06:36Z",
+      "pushed_at": "2026-09-13T05:06:33Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-13T05:06:36Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "active"
+    }
+  ]
+}

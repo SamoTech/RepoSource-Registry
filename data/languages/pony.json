@@ -1,37 +1,43 @@
-[
-  {
-    "repository_id": 6667084,
-    "full_name": "ponylang/ponyc",
-    "owner": "ponylang",
-    "name": "ponyc",
-    "html_url": "https://github.com/ponylang/ponyc",
-    "api_url": "https://api.github.com/repos/ponylang/ponyc",
-    "description": "Pony is an open-source, actor-model, capabilities-secure, high performance programming language",
-    "stars": 6183,
-    "forks": 437,
-    "watchers": 6183,
-    "open_issues": 134,
-    "primary_language": "Pony",
-    "topics": [
-      "actor-model",
-      "pony-language",
-      "pony-source",
-      "ponyc",
-      "ponylang",
-      "programming-language"
-    ],
-    "license": "BSD-2-Clause",
-    "default_branch": "main",
-    "archived": false,
-    "fork": false,
-    "created_at": "2012-11-13T07:38:25Z",
-    "updated_at": "2026-09-13T03:09:40Z",
-    "pushed_at": "2026-09-13T03:09:36Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "5k+",
-    "activity_status": "active"
-  }
-]
+{
+  "language": "Pony",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 6667084,
+      "full_name": "ponylang/ponyc",
+      "owner": "ponylang",
+      "name": "ponyc",
+      "html_url": "https://github.com/ponylang/ponyc",
+      "api_url": "https://api.github.com/repos/ponylang/ponyc",
+      "description": "Pony is an open-source, actor-model, capabilities-secure, high performance programming language",
+      "stars": 6183,
+      "forks": 437,
+      "watchers": 6183,
+      "open_issues": 136,
+      "primary_language": "Pony",
+      "topics": [
+        "actor-model",
+        "pony-language",
+        "pony-source",
+        "ponyc",
+        "ponylang",
+        "programming-language"
+      ],
+      "license": "BSD-2-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "created_at": "2012-11-13T07:38:25Z",
+      "updated_at": "2026-09-13T03:09:40Z",
+      "pushed_at": "2026-09-13T03:52:47Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-13T03:09:40Z",
+      "categories": [],
+      "popularity_band": "5k+",
+      "activity_status": "active"
+    }
+  ]
+}

@@ -1,30 +1,36 @@
-[
-  {
-    "repository_id": 13779494,
-    "full_name": "krschultz/android-proguard-snippets",
-    "owner": "krschultz",
-    "name": "android-proguard-snippets",
-    "html_url": "https://github.com/krschultz/android-proguard-snippets",
-    "api_url": "https://api.github.com/repos/krschultz/android-proguard-snippets",
-    "description": "Proguard configurations for common Android libraries",
-    "stars": 4536,
-    "forks": 584,
-    "watchers": 4536,
-    "open_issues": 60,
-    "primary_language": "IDL",
-    "topics": [],
-    "license": "Apache-2.0",
-    "default_branch": "master",
-    "archived": true,
-    "fork": false,
-    "created_at": "2013-10-22T16:44:36Z",
-    "updated_at": "2026-09-06T01:24:56Z",
-    "pushed_at": "2019-03-18T18:32:36Z",
-    "indexed_at": "2026-09-13T03:07:56Z",
-    "source": "github-public-api",
-    "dataset_version": "1.0.0",
-    "categories": [],
-    "popularity_band": "2k+",
-    "activity_status": "inactive"
-  }
-]
+{
+  "language": "IDL",
+  "repository_count": 1,
+  "repositories": [
+    {
+      "repository_id": 13779494,
+      "full_name": "krschultz/android-proguard-snippets",
+      "owner": "krschultz",
+      "name": "android-proguard-snippets",
+      "html_url": "https://github.com/krschultz/android-proguard-snippets",
+      "api_url": "https://api.github.com/repos/krschultz/android-proguard-snippets",
+      "description": "Proguard configurations for common Android libraries",
+      "stars": 4536,
+      "forks": 584,
+      "watchers": 4536,
+      "open_issues": 60,
+      "primary_language": "IDL",
+      "topics": [],
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": true,
+      "fork": false,
+      "created_at": "2013-10-22T16:44:36Z",
+      "updated_at": "2026-09-06T01:24:56Z",
+      "pushed_at": "2019-03-18T18:32:36Z",
+      "indexed_at": "2026-09-13T06:39:43Z",
+      "source": "github-public-api",
+      "dataset_version": "1.0.0",
+      "schema_version": "1.1.0",
+      "source_updated_at": "2026-09-06T01:24:56Z",
+      "categories": [],
+      "popularity_band": "2k+",
+      "activity_status": "inactive"
+    }
+  ]
+}
