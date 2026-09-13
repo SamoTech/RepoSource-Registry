@@ -1,37 +1,84 @@
-# Sustainable monetization model
+# Sustainable monetization
 
-RepoSource Registry should monetize services around the open dataset, not degrade the public dataset to force payment.
+RepoSource Registry follows one non-negotiable principle: the public dataset should remain useful without payment. Commercial value is created around the open data through support, expertise, customization, research, analytics, and hosted experiences.
 
-| Model | Customer | Value | Priority | Open-source boundary |
-|---|---|---|---|---|
-| GitHub Sponsors | Users and maintainers | Direct support for maintenance | Immediate | Public dataset remains open |
-| Company sponsorship | Developer/data companies | Fund ecosystem infrastructure | After adoption evidence | No ranking or data influence |
-| Support/consulting | Teams using the registry | Integration and implementation help | Opportunistic | Core project remains public |
-| Custom datasets | Companies/researchers | Tailored derived views | Validate demand first | Generic methodology stays public |
-| API subscription | High-volume applications | Convenience, scale, reliability | Later | Static public dataset remains useful |
-| Historical snapshots | Researchers and data teams | Longitudinal analysis | Later | Public snapshots can remain available where practical |
-| Analytics | Ecosystem teams | Trends, comparisons, alerts | Later | Raw public foundation remains open |
-| Enterprise exports | Larger organizations | Operational integration | Later | No private manipulation of public rankings |
+## Permanent API decision
 
-## Product ladder
+**Paid API monetization is permanently cancelled.** The project will not offer paid API subscriptions, premium API tiers, request-based API billing, paid API limits, or enterprise API access as a monetization model.
 
-**Open layer:** canonical JSON/CSV, schema, indexes, methodology, examples, provenance.
+A future developer interface may be built as an open/free technical capability if real usage demonstrates a need for it. API access is not part of the commercial strategy.
 
-**Developer layer:** CLI, SDK, static query helpers, and eventually a free API if demand justifies them.
+## Open layer
 
-**Intelligence layer:** history, trends, similarity, recommendations, alerts, and ecosystem analytics.
+Always public and maintained as the project's foundation:
 
-**Commercial layer:** higher-volume API access, enterprise exports, managed integrations, and custom analytics.
+- canonical dataset;
+- schema;
+- statistics and metadata;
+- useful indexes and partitions;
+- methodology and provenance;
+- examples and documentation;
+- validation and integrity artifacts.
+
+## Community support layer
+
+GitHub Sponsors and company sponsorship can fund public infrastructure, including collection reliability, CI, validation, documentation, historical preservation, and interoperability.
+
+Sponsorship never buys repository inclusion, exclusion, ranking, classification, suppression, or hidden data changes.
+
+## Professional services layer
+
+Teams can pay for engineering work around the open project:
+
+- data integration;
+- custom filtering and processing pipelines;
+- AI/RAG integration;
+- developer-tool integration;
+- repository analytics workflows;
+- custom automation;
+- architecture and implementation consulting;
+- technical support.
+
+The customer pays for expertise, implementation, customization, and support—not ownership of the public dataset.
+
+## Research and custom-data layer
+
+Potential paid work includes:
+
+- custom repository research;
+- language- or topic-specific studies;
+- custom derived datasets;
+- ecosystem reports;
+- historical analysis where appropriate snapshots exist;
+- organization-specific research;
+- reproducible analytical deliverables.
+
+Custom work must remain clearly separated from the canonical public registry. Customer requirements must not silently alter public data.
+
+## Hosted product layer
+
+If recurring demand justifies product development, potential hosted experiences include:
+
+- repository discovery interfaces;
+- visual analytics and trend exploration;
+- repository comparison;
+- similarity and recommendation interfaces;
+- research workbenches;
+- organization intelligence tools;
+- analytical reporting portals.
+
+These products should add interface, analysis, workflow, or hosted convenience while leaving the underlying open dataset independently useful.
 
 ## Decision rule
 
-Do not build a paid service because it sounds monetizable. Build it when repeated users encounter a measurable limitation in the free static dataset and at least one customer is willing to pay to remove that limitation.
+Do not build a commercial feature merely because it sounds monetizable. Prioritize work only when there is evidence of repeated user value, a clear maintenance model, and a legitimate reason for customers to pay for expertise, customization, analysis, or hosted functionality.
 
-## Trust guardrails
+## Guardrails
 
 - The canonical public dataset remains accessible.
 - Provenance and methodology remain transparent.
-- Paid services add convenience, scale, historical depth, or analysis.
-- Sponsor identity cannot alter ranking or classification rules.
+- Sponsorship does not influence data integrity.
+- Paid work does not buy ranking or inclusion decisions.
 - No private user information is sold.
-- No deceptive claims or fabricated adoption metrics.
+- No deceptive marketing or fabricated adoption metrics.
+- No artificial scarcity is introduced into the public foundation.

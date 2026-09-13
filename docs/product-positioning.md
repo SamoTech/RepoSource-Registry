@@ -1,37 +1,64 @@
-# RepoSource Registry: product positioning
+# Product positioning
 
-## Current product
+## Current verified value
 
-RepoSource Registry is a public, machine-readable discovery dataset of GitHub repositories meeting the configured `stars >= 2000` inclusion policy. It turns mutable GitHub Search results into a documented snapshot with a stable schema, derived discovery partitions, validation, provenance, and integrity metadata.
+RepoSource Registry is an open, machine-readable GitHub repository discovery dataset and public data infrastructure layer. The current published snapshot contains 33,180 public repositories meeting the configured `stars >= 2,000` inclusion policy.
+
+The project converts upstream GitHub repository Search results into a documented snapshot with normalized records, a versioned schema, focused partitions, validation, provenance, integrity metadata, and change information.
 
 ## Problem
 
-GitHub Search is excellent for interactive discovery, but many applications need a reproducible dataset they can download, inspect, filter, validate, and process without implementing the collection and pagination logic themselves.
+GitHub Search is effective for interactive upstream discovery. A downstream application or research workflow may instead need a reproducible snapshot that can be downloaded, inspected, filtered, tested, cited, and processed locally without rebuilding the same collection and normalization layer.
 
 ## Target users
 
-- Developers building repository discovery and recommendation tools.
-- AI and RAG developers that need structured repository metadata.
+- Developers building repository discovery, catalog, or recommendation tools.
+- AI/data developers using structured repository metadata in retrieval and analysis workflows.
 - Researchers and data scientists studying open-source ecosystems.
-- Developer-tool companies building catalogs, integrations, and intelligence products.
-- Open-source maintainers who need ecosystem discovery data.
+- Developer-tool and infrastructure teams building downstream products.
+- Open-source maintainers and technical researchers who need structured discovery data.
+
+## Solution
+
+RepoSource publishes the discovery result as open data with explicit scope and source provenance. The canonical registry, schema, manifest, statistics, partitions, and methodology let downstream users inspect what was collected and how it should be interpreted.
 
 ## Differentiator
 
-The useful product is not simply the list of repositories. It is the combination of a public snapshot, explicit provenance, a versioned schema, deterministic output, derived indexes, integrity hashes, and documented limitations.
+The differentiation is the reusable, reproducible data layer—not a claim to replace GitHub Search. RepoSource combines:
 
-## Why users can return
+- a public snapshot;
+- normalized machine-readable records;
+- a versioned schema;
+- deterministic derived fields;
+- focused language and category partitions;
+- validation and duplicate checks;
+- manifest hashes and synchronization metadata;
+- documented methodology and limitations.
 
-The recurring value is the weekly snapshot and the change history: users can compare ecosystem state over time without rebuilding the collection process themselves.
+## Why developers may use it
 
-## Sponsorship rationale
+A developer can clone the repository and query the canonical JSON locally with standard tools. Focused partitions reduce the need to scan the full dataset for common discovery tasks.
 
-A sponsor is funding maintenance of open data infrastructure: collection reliability, validation, documentation, discoverability, historical snapshots, and future interoperability. Sponsorship should support the public resource rather than buy preferential treatment in the registry.
+## Why researchers may use it
 
-## Commercial extensions
+The snapshot, version metadata, provenance, and change artifacts provide a clearer basis for reproducible analysis than an undocumented point-in-time search result.
 
-Potential future products include a higher-volume API, historical snapshots, change alerts, trend analysis, repository similarity, enterprise exports, and custom integrations. These are future opportunities, not current product claims.
+## Why AI/data applications may use it
 
-## Validation status
+The project exposes an explicit data contract, machine-readable metadata, canonical paths, provenance, and agent-oriented orientation. Downstream systems can consume structured records while retaining the upstream GitHub URL for verification.
 
-Current value is supported by the published dataset, schema, generation workflow, tests, manifest, and discovery artifacts. Demand for future paid products must be validated through actual users before substantial infrastructure is built.
+## Why contributors may improve it
+
+The project has a concrete public data contract. Improvements to validation, documentation, examples, interoperability, and reproducibility benefit every downstream consumer without requiring contributors to operate a hosted service.
+
+## Why companies may sponsor it
+
+A company can fund maintenance of reusable public infrastructure it finds useful or wants the ecosystem to have. Sponsorship supports the project; it does not purchase influence over repository inclusion, ranking, classification, or suppression.
+
+## Future potential
+
+Future commercial opportunities are intentionally outside the canonical dataset: professional integration, custom data engineering, research, analytical work, hosted discovery experiences, and organization-specific implementations. These are potential services, not validated market demand.
+
+## Strategic boundary
+
+The public dataset remains open and useful on its own. Revenue must come from sponsorship, expertise, implementation, customization, research, analytics, or hosted experiences—not from artificially restricting the underlying public data.

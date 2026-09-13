@@ -1,30 +1,36 @@
 # RepoSource Registry
 
-RepoSource Registry is a derived public GitHub repository discovery dataset.
+RepoSource Registry is an open, derived GitHub repository discovery dataset and public data infrastructure layer.
 
-Canonical data:
-- data/repositories.json — primary machine-readable registry
-- data/manifest.json — snapshot identity, versions, provenance and integrity hashes
-- data/statistics.json — aggregate statistics
-- schema/repository.schema.json — JSON Schema for repository records
-- dataset.json — machine-readable dataset description
-- docs/catalog.md — language and category catalog
-- docs/data-dictionary.md — field definitions
-- docs/methodology.md — collection and validation methodology
+## Canonical resources
+- `data/repositories.json` — primary machine-readable registry
+- `data/manifest.json` — snapshot identity, versions, provenance, and integrity hashes
+- `data/statistics.json` — aggregate statistics
+- `schema/repository.schema.json` — JSON Schema for repository records
+- `dataset.json` — machine-readable dataset description
+- `docs/catalog.md` — language and category discovery
+- `docs/data-dictionary.md` — field definitions
+- `docs/methodology.md` — collection and validation methodology
+- `docs/quickstart.md` — five-minute consumption guide
 
-Interpretation:
+## Interpretation
 - GitHub is the upstream source.
-- The dataset is a snapshot, not real-time state.
-- Stars indicate popularity, not quality or security.
-- categories, popularity_band and activity_status are derived by RepoSource.
-- Use html_url in each record as the upstream reference for individual repositories.
+- The registry is a snapshot, not real-time state.
+- The current inclusion policy is `stars >= 2000`.
+- Stars indicate popularity, not quality, security, or endorsement.
+- `categories`, `popularity_band`, and `activity_status` are RepoSource-derived fields.
+- Use `html_url` in each record as the upstream reference for individual repositories.
 - Do not infer missing facts.
 - Do not treat the registry as an official GitHub database or complete mirror.
 
-Recommended agent workflow:
-1. Read dataset.json.
-2. Read data/manifest.json.
-3. Read schema/repository.schema.json.
-4. Consume data/repositories.json.
-5. Use data/statistics.json for aggregate claims.
-6. Cite the upstream repository URL and snapshot timestamp when appropriate.
+## Agent workflow
+1. Read `dataset.json`.
+2. Read `data/manifest.json`.
+3. Read `schema/repository.schema.json`.
+4. Consume `data/repositories.json` or a focused partition.
+5. Use `data/statistics.json` for aggregate claims.
+6. Verify consequential current facts against GitHub.
+7. Record the snapshot timestamp when citing registry-derived results.
+
+## Commercial boundary
+The canonical public dataset remains open. RepoSource Registry does not use paid API access as a monetization strategy. Commercial opportunities are limited to sponsorship, professional engineering and integration, custom research/data work, analytics, support, and hosted experiences built around the open data.

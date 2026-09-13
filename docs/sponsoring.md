@@ -1,39 +1,54 @@
 # Sponsoring RepoSource Registry
 
-RepoSource Registry is open infrastructure. Sponsorship helps keep the dataset reliable and useful rather than paying for hidden data.
+RepoSource Registry is open data infrastructure. Sponsorship helps keep the public registry maintained, validated, documented, and reproducible.
 
 ## What sponsorship supports
 
-- Weekly data collection and maintenance.
-- Pagination, validation, and regression testing.
-- Schema and machine-readable artifact maintenance.
-- Documentation and examples.
-- Discovery indexes and AI-agent interoperability.
-- Historical snapshots and change analysis when infrastructure permits.
-- Future API and integration work driven by demonstrated user demand.
+Sponsor funding can support:
+
+- scheduled dataset maintenance and CI;
+- validation and regression testing;
+- schema and machine-readable artifact maintenance;
+- documentation and examples;
+- discovery indexes and interoperability;
+- historical preservation and change analysis when feasible;
+- open integrations and developer tooling;
+- research and data-quality improvements.
 
 ## Suggested sponsorship levels
 
-| Level | Suggested contribution | Purpose |
-|---|---|---|
-| Supporter | small recurring contribution | Help keep the public dataset maintained. |
-| Contributor | regular contribution | Support tests, documentation, and data-quality work. |
-| Project Sponsor | meaningful recurring contribution | Support recurring dataset infrastructure and improvements. |
-| Infrastructure Sponsor | substantial recurring contribution | Help fund storage, automation, and future historical services. |
-| Corporate Sponsor | organization-level support | Fund sustained maintenance and a defined open-source improvement program. |
+These are suggested contribution levels, not service contracts.
 
-These are contribution levels, not guaranteed service contracts. Sponsorship does not buy preferential repository ranking, hidden access to public records, or influence over classifications.
+| Level | Suggested purpose |
+|---|---|
+| **Supporter** | Help keep the public dataset maintained. |
+| **Contributor** | Support validation, tests, documentation, and developer experience. |
+| **Project Sponsor** | Support meaningful improvements to the public project. |
+| **Infrastructure Sponsor** | Help fund CI, storage, automation, validation, and preservation. |
+| **Corporate Sponsor** | Fund sustained maintenance or a defined open-source improvement program. |
+
+No level guarantees traffic, advertising, leads, ranking, exposure, exclusivity, or preferential treatment.
+
+## Independence from sponsors
+
+Sponsors do not receive the ability to:
+
+- add or remove repositories for private benefit;
+- change repository rankings or derived classifications;
+- suppress inconvenient records;
+- alter collection rules for private advantage;
+- obtain private user information.
+
+The same documented collection, normalization, and validation rules apply regardless of sponsor identity.
 
 ## For individual sponsors
 
-Sponsor because the registry saves implementation time, provides a useful snapshot, or supports a public data resource you want to continue existing.
+A sponsorship is appropriate when the registry saves implementation effort, supports research, or provides infrastructure you want to continue existing.
 
 ## For companies
 
-A company can sponsor the project as open-source infrastructure it depends on or as a way to fund improvements that benefit the wider developer ecosystem. Company sponsorship should be tied to concrete maintenance goals rather than advertising claims.
+Companies can sponsor RepoSource as public infrastructure that benefits their developer ecosystem, research community, or downstream tooling. The strongest sponsorship proposals connect funding to concrete technical work and measurable public outputs.
 
-## Transparency principle
+## GitHub Sponsors status
 
-Sponsorship funds project maintenance and development. The public dataset remains subject to the same documented collection and classification rules regardless of sponsor identity.
-
-GitHub Sponsors is configured through `.github/FUNDING.yml`. The actual availability of sponsorship features depends on the maintainer account's GitHub Sponsors status.
+`.github/FUNDING.yml` is configured for the `SamoTech` GitHub account. Actual sponsorship availability depends on the maintainer account's GitHub Sponsors eligibility and activation.

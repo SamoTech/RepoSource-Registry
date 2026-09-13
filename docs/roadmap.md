@@ -1,40 +1,49 @@
 # Roadmap
 
-The roadmap is deliberately staged. Adoption and evidence come before expensive infrastructure.
+RepoSource Registry is developed as open data infrastructure. Roadmap priority follows demonstrated user value, correctness, maintenance capacity, and evidence from actual downstream use.
 
-## Now: make the open dataset dependable
+## Now — dependable open data
 
-- Maintain the weekly public snapshot.
-- Keep schema, statistics, manifest, and generated indexes internally consistent.
-- Improve examples and documentation.
-- Make contribution and data-quality reporting easy.
-- Establish reproducible releases or snapshots when the historical value justifies them.
+- Maintain the scheduled public snapshot.
+- Keep schema, manifest, statistics, partitions, and change artifacts consistent.
+- Preserve deterministic generation and validation.
+- Improve examples, documentation, and contributor experience.
+- Make data-quality reporting straightforward.
 
-## Next: improve developer adoption
+## Next — adoption and interoperability
 
-- Add more focused query examples.
-- Publish small interoperability artifacts only when they solve a demonstrated use case.
+- Add focused query examples and integrations based on real usage.
+- Improve static indexes only where they solve recurring discovery tasks.
 - Improve change-history documentation.
-- Gather real user feedback through issues and discussions.
-- Validate which use cases generate repeat usage.
+- Encourage external research, references, and downstream projects.
+- Consider a lightweight CLI or SDK only if users repeatedly need the same access patterns.
 
-## Later: developer infrastructure
+## Later — historical and analytical capabilities
 
-- Static query/index endpoints.
-- A lightweight CLI or SDK if users repeatedly implement the same access patterns.
-- Optional free API access if static files stop being sufficient.
-- Historical snapshot access and change feeds.
+- Reproducible historical snapshots where storage and maintenance are justified.
+- Trend and change analysis.
+- Repository similarity and recommendation experiments.
+- Richer developer tooling and research workflows.
+- Additional interoperability artifacts where they have demonstrated utility.
 
-## Future: repository intelligence
+## Future — hosted experiences and commercial services
 
-- Repository trend analysis.
-- Similarity and recommendation services.
-- Ecosystem analytics.
-- Alerts and change tracking.
-- Enterprise exports and integrations.
+Potential products around the open dataset include:
 
-## Commercial boundary
+- hosted repository discovery;
+- visual analytics and trend exploration;
+- repository comparison;
+- research workbenches;
+- organization intelligence;
+- custom analytical reporting;
+- commercial integrations and professional services.
 
-The canonical open dataset, schema, provenance, and basic documentation should remain public. Paid products should add operational convenience, scale, historical depth, analytics, or integration value rather than conceal the public foundation.
+These are potential directions, not commitments or claims of current demand.
 
-No roadmap item is a commitment to a launch date. Priority should follow measured demand, maintenance capacity, and evidence from actual users.
+## Permanent monetization boundary
+
+**Paid API monetization is permanently cancelled.** There will be no paid API subscriptions, premium API tiers, API request billing, paid API limits, or enterprise API access as a revenue strategy.
+
+If an API or similar developer interface is ever built, it should be considered an open/free technical interface and justified by actual usage rather than introduced as a paywall around the public dataset.
+
+Revenue should come from sponsorship, engineering expertise, customization, research, analytics, support, and hosted experiences—not artificial scarcity in the canonical data.
