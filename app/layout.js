@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
               <Link href="/search">Discover</Link>
               <Link href="/data">Data</Link>
               <Link href="/research">Research</Link>
+              <Link href="/quality">Quality</Link>
               <a href={`${githubBase}docs/services.md`} rel="noreferrer">Services ↗</a>
               <a href={sponsorUrl} rel="noreferrer">Sponsor ↗</a>
               <a href={githubRepo} rel="noreferrer">GitHub ↗</a>
@@ -50,7 +51,7 @@ export default function RootLayout({ children }) {
             <div><strong>RepoSource Registry</strong><p>Open repository discovery data. GitHub remains the primary source for current repository facts.</p><span className="footer-status"><i /> PUBLIC DATASET · MIT LICENSE</span></div>
             <div className="footer-links">
               <Link href="/search">Discover</Link><Link href="/data">Dataset</Link>
-              <Link href="/research">Research</Link>
+              <Link href="/research">Research</Link><Link href="/quality">Quality</Link>
               <a href={`${githubBase}docs/quickstart.md`} rel="noreferrer">Quickstart</a>
               <a href={`${githubBase}docs/methodology.md`} rel="noreferrer">Methodology</a>
               <a href={`${githubBase}docs/data-dictionary.md`} rel="noreferrer">Schema / dictionary</a>

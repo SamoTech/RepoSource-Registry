@@ -16,6 +16,8 @@ The public discovery interface is deployed on Vercel:
 
 The web application is a presentation and discovery layer. GitHub remains the canonical project and public data distribution.
 
+**[Inspect published data-quality metrics →](https://repo-source-registry.vercel.app/quality)**
+
 ## Current dataset
 
 The current published snapshot was generated on **2026-09-13T06:39:43Z** and contains repositories meeting the configured `stars >= 2,000` inclusion policy.

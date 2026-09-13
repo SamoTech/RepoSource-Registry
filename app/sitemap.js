@@ -8,5 +8,6 @@ export default function sitemap() {
     { url: `${siteUrl}/search`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/data`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${siteUrl}/research`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/quality`, changeFrequency: "monthly", priority: 0.7 },
   ];
 }
