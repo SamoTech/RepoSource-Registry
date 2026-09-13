@@ -10,7 +10,11 @@ GitHub remains the upstream source of repository facts. RepoSource Registry is a
 
 ## Public discovery
 
-The project includes a Vercel-ready public discovery interface that makes the open dataset easier to explore. **Public web interface: pending deployment.** The website is a presentation and discovery layer; GitHub remains the canonical project and data distribution.
+The public discovery interface is deployed on Vercel:
+
+**[Open RepoSource Registry Discovery →](https://repo-source-registry.vercel.app/)**
+
+The web application is a presentation and discovery layer. GitHub remains the canonical project and public data distribution.
 
 ## Current dataset
 
@@ -41,7 +45,7 @@ Snapshot aggregates are maintained in [`data/statistics.json`](data/statistics.j
 - Manifest, synchronization metadata, and SHA-256 integrity hashes.
 - JSON Schema defining the repository record contract.
 - Machine-readable dataset metadata and [`llms.txt`](llms.txt) for automated consumers.
-- Public discovery UI source under `app/` for optional Vercel deployment.
+- Public discovery UI source under `app/` for Vercel deployment.
 
 The canonical registry is [`data/repositories.json`](data/repositories.json). Supporting artifacts do not replace it.
 
@@ -112,7 +116,7 @@ The project makes no claims of AI endorsement, certification, indexing, or offic
 
 ## Vercel discovery architecture
 
-The optional web layer uses Next.js App Router and server-rendered pages. It reads the existing canonical snapshot and statistics from the public GitHub distribution with revalidation caching; it does not create a database or regenerate the dataset during deployment.
+The public web layer uses Next.js App Router and server-rendered pages. It reads the existing canonical snapshot and statistics from the public GitHub distribution with revalidation caching; it does not create a database or regenerate the dataset during deployment.
 
 The interface provides:
 
@@ -151,6 +155,7 @@ Repositories below the configured star threshold are excluded. GitHub Search sem
 - [`docs/product-positioning.md`](docs/product-positioning.md) — product definition.
 - [`docs/roadmap.md`](docs/roadmap.md) — staged roadmap.
 - [`docs/vercel.md`](docs/vercel.md) — public discovery deployment.
+- [`docs/first-users.md`](docs/first-users.md) — evidence-driven first-user experiments.
 - [`docs/sponsoring.md`](docs/sponsoring.md) — community support.
 - [`docs/corporate-sponsorship.md`](docs/corporate-sponsorship.md) — corporate support.
 - [`docs/services.md`](docs/services.md) — professional services.
