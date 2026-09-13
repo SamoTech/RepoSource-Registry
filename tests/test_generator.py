@@ -1,9 +1,6 @@
 import copy
-import json
-import tempfile
 import unittest
 from datetime import datetime, timezone
-from pathlib import Path
 from unittest.mock import Mock
 
 import generate_list
@@ -48,6 +45,26 @@ class GeneratorTests(unittest.TestCase):
             for record in reversed(records)
         ][::-1]
         self.assertEqual(forward, reverse)
+
+    def test_classification_boundary_dates(self):
+        exactly_boundary = {
+            "topics": [],
+            "stars": 2000,
+            "pushed_at": "2025-07-05T00:00:00Z",
+        }
+        beyond_boundary = {
+            "topics": [],
+            "stars": 2000,
+            "pushed_at": "2025-07-04T23:59:59Z",
+        }
+        self.assertEqual(
+            generate_list.classify(copy.deepcopy(exactly_boundary), self.cfg, self.reference_time)["activity_status"],
+            "active",
+        )
+        self.assertEqual(
+            generate_list.classify(copy.deepcopy(beyond_boundary), self.cfg, self.reference_time)["activity_status"],
+            "inactive",
+        )
 
     def test_classification_uses_explicit_timezone_aware_reference_time(self):
         record = {
