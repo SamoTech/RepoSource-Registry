@@ -1,13 +1,19 @@
 import Link from "next/link";
 import "./globals.css";
 
+const siteUrl = "https://repo-source-registry.vercel.app";
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: { default: "RepoSource Registry — GitHub Repository Discovery", template: "%s · RepoSource Registry" },
   description: "Explore an open, machine-readable GitHub repository discovery dataset with documented provenance, schema, and snapshots.",
+  alternates: { canonical: siteUrl },
   openGraph: {
     title: "RepoSource Registry — GitHub Repository Discovery",
     description: "Open, machine-readable GitHub repository discovery data.",
     type: "website",
+    url: siteUrl,
+    siteName: "RepoSource Registry",
   },
   twitter: { card: "summary", title: "RepoSource Registry", description: "Open GitHub repository discovery data." },
 };
