@@ -1,3 +1,7 @@
+function jsonLd(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
 export function WebsiteStructuredData() {
   const data = {
     "@context": "https://schema.org",
@@ -13,7 +17,7 @@ export function WebsiteStructuredData() {
     },
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(data) }} />;
 }
 
 export function DatasetStructuredData({ stats }) {
@@ -45,5 +49,5 @@ export function DatasetStructuredData({ stats }) {
     isAccessibleForFree: true,
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(data) }} />;
 }

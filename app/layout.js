@@ -4,6 +4,8 @@ import { WebsiteStructuredData } from "./seo-schema";
 
 const siteUrl = "https://repo-source-registry.vercel.app";
 const githubBase = "https://github.com/SamoTech/RepoSource-Registry/blob/main/";
+const githubRepo = "https://github.com/SamoTech/RepoSource-Registry";
+const sponsorUrl = "https://github.com/sponsors/SamoTech";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,7 +39,8 @@ export default function RootLayout({ children }) {
               <Link href="/data">Data</Link>
               <a href={`${githubBase}docs/research.md`} rel="noreferrer">Research ↗</a>
               <a href={`${githubBase}docs/services.md`} rel="noreferrer">Services ↗</a>
-              <a href="https://github.com/SamoTech/RepoSource-Registry" rel="noreferrer">GitHub ↗</a>
+              <a href={sponsorUrl} rel="noreferrer">Sponsor ↗</a>
+              <a href={githubRepo} rel="noreferrer">GitHub ↗</a>
             </nav>
           </div>
         </header>
@@ -53,6 +56,7 @@ export default function RootLayout({ children }) {
               <a href={`${githubBase}docs/research.md`} rel="noreferrer">Research</a>
               <a href={`${githubBase}docs/showcase.md`} rel="noreferrer">Showcase</a>
               <a href={`${githubBase}docs/sponsoring.md`} rel="noreferrer">Sponsoring</a>
+              <a href={sponsorUrl} rel="noreferrer">GitHub Sponsors ↗</a>
               <a href={`${githubBase}docs/services.md`} rel="noreferrer">Services</a>
               <a href={`${githubBase}CONTRIBUTING.md`} rel="noreferrer">Contributing</a>
               <a href={`${githubBase}SECURITY.md`} rel="noreferrer">Security</a>
