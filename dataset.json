@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "RepoSource Registry",
+  "description": "A machine-readable dataset of public GitHub repositories meeting the configured popularity threshold, derived from GitHub public repository metadata.",
+  "url": "https://github.com/SamoTech/RepoSource-Registry",
+  "sameAs": "https://github.com/SamoTech/RepoSource-Registry",
+  "version": "1.0.0",
+  "dateModified": "2026-09-13T06:39:43Z",
+  "license": "https://opensource.org/licenses/MIT",
+  "isBasedOn": "https://docs.github.com/en/rest/search/search#search-repositories",
+  "keywords": [
+    "GitHub repository registry",
+    "GitHub repository dataset",
+    "open source repository dataset",
+    "GitHub Search API",
+    "repository discovery",
+    "GitHub repository metadata",
+    "programming language repositories",
+    "developer tools",
+    "AI repository discovery",
+    "machine-readable GitHub data"
+  ],
+  "inclusionPolicy": {"minimum_stars": 2000},
+  "distribution": [
+    {"encodingFormat": "application/json", "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.json"},
+    {"encodingFormat": "text/csv", "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.csv"}
+  ],
+  "schema": "https://github.com/SamoTech/RepoSource-Registry/blob/main/schema/repository.schema.json",
+  "provenance": {"source": "github-public-api", "repositoryCount": 33180, "generatedAt": "2026-09-13T06:39:43Z"},
+  "derivedFields": ["categories", "popularity_band", "activity_status"],
+  "limitations": [
+    "Not a complete mirror of GitHub.",
+    "Not real-time.",
+    "Repository metadata can change between snapshots.",
+    "Stars are popularity signals, not quality or security assessments."
+  ]
+}

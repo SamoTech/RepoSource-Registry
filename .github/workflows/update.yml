@@ -59,6 +59,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python generate_list.py
 
+      - name: Generate discovery and trust artifacts
+        run: python tools/generate_discovery.py
+
       - name: Validate generated dataset
         run: |
           python - <<'PY'
@@ -97,9 +100,11 @@ jobs:
                   if value:
                       datetime.fromisoformat(value.replace('Z', '+00:00'))
               for field in ('html_url', 'api_url'):
-                  parsed = urlparse(record[field])
-                  if parsed.scheme not in {'http', 'https'} or not parsed.netloc:
-                      raise SystemExit(f"invalid URL in {record.get('full_name')}: {field}")
+                  value = record.get(field)
+                  if value:
+                      parsed = urlparse(value)
+                      if parsed.scheme not in {'http', 'https'} or not parsed.netloc:
+                          raise SystemExit(f"invalid URL in {record.get('full_name')}: {field}")
 
           stats = json.loads((root / 'data/statistics.json').read_text(encoding='utf-8'))
           if stats.get('repository_count') != len(records):
@@ -115,16 +120,28 @@ jobs:
           if manifest.get('schema_version') != data.get('schema_version'):
               raise SystemExit('manifest schema_version mismatch')
 
-          print(f'Validated {len(records)} repository records; threshold={minimum}; unique IDs/names; stable ordering; schema; URLs; timestamps; statistics; manifest')
+          metadata = json.loads((root / 'dataset.json').read_text(encoding='utf-8'))
+          if metadata.get('@type') != 'Dataset':
+              raise SystemExit('dataset.json is not a Schema.org Dataset')
+          if metadata.get('provenance', {}).get('repositoryCount') != len(records):
+              raise SystemExit('dataset metadata repository count mismatch')
+          if metadata.get('provenance', {}).get('generatedAt') != stats.get('generated_at'):
+              raise SystemExit('dataset metadata timestamp mismatch')
+
+          for path in (root / 'README.md', root / 'llms.txt', root / 'docs/catalog.md', root / 'docs/data-dictionary.md', root / 'docs/methodology.md'):
+              if not path.exists() or not path.read_text(encoding='utf-8').strip():
+                  raise SystemExit(f'missing discovery artifact: {path}')
+
+          print(f'Validated {len(records)} repository records and discovery artifacts; threshold={minimum}; schema; URLs; timestamps; statistics; manifest; metadata')
           PY
 
-      - name: Commit changed dataset
+      - name: Commit changed dataset and discovery artifacts
         run: |
           git config user.name 'RepoSource Registry Bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md data/
+          git add README.md data/ docs/ dataset.json llms.txt
           if git diff --cached --quiet; then
-            echo 'No dataset changes detected.'
+            echo 'No dataset or discovery changes detected.'
             exit 0
           fi
           git commit -m 'chore(data): update repository registry'
