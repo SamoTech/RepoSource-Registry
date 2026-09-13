@@ -1,16 +1,18 @@
 import Link from "next/link";
 import "./globals.css";
+import { WebsiteStructuredData } from "./seo-schema";
 
 const siteUrl = "https://repo-source-registry.vercel.app";
 const githubBase = "https://github.com/SamoTech/RepoSource-Registry/blob/main/";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "RepoSource Registry — GitHub Repository Discovery", template: "%s · RepoSource Registry" },
-  description: "Open, machine-readable GitHub repository discovery data with documented provenance, schema, and snapshots.",
+  title: { default: "RepoSource Registry — Open GitHub Repository Discovery Data", template: "%s · RepoSource Registry" },
+  description: "Open, machine-readable GitHub repository discovery data with documented provenance, schema, and reproducible snapshots.",
   alternates: { canonical: siteUrl },
+  verification: { google: "_EapoLGFWorKHOtsAEG4rjq0wg__sAgb5ARz1hrEBCw" },
   openGraph: {
-    title: "RepoSource Registry — GitHub Repository Discovery",
+    title: "RepoSource Registry — Open GitHub Repository Discovery Data",
     description: "Open, machine-readable GitHub repository discovery data.",
     type: "website",
     url: siteUrl,
@@ -24,6 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <WebsiteStructuredData />
         <header className="site-header">
           <div className="shell nav">
             <Link href="/" className="brand" aria-label="RepoSource Registry home"><span className="brand-mark">R</span><span>RepoSource</span> Registry</Link>
