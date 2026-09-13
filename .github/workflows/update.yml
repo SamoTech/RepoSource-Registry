@@ -6,16 +6,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: registry-update
   cancel-in-progress: false
 
 jobs:
-  update:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -32,21 +32,90 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
+      - name: Compile Python sources
+        run: python -m compileall -q generate_list.py tools tests
+
+  publish:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
       - name: Generate dataset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python generate_list.py
 
-      - name: Validate generated JSON and schema
+      - name: Validate generated dataset
         run: |
           python - <<'PY'
           import json
-          from jsonschema import validate
-          data = json.load(open('data/repositories.json', encoding='utf-8'))
-          schema = json.load(open('schema/repository.schema.json', encoding='utf-8'))
-          for repo in data['repositories']:
-              validate(repo, schema)
-          print(f"Validated {len(data['repositories'])} repository records")
+          from datetime import datetime
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from jsonschema import Draft202012Validator
+
+          root = Path('.')
+          data = json.loads((root / 'data/repositories.json').read_text(encoding='utf-8'))
+          schema = json.loads((root / 'schema/repository.schema.json').read_text(encoding='utf-8'))
+          config = json.loads((root / 'config.json').read_text(encoding='utf-8'))
+          validator = Draft202012Validator(schema)
+          records = data['repositories']
+          minimum = int(config['min_stars'])
+
+          ids = [record['repository_id'] for record in records]
+          names = [record['full_name'] for record in records]
+          if len(ids) != len(set(ids)):
+              raise SystemExit('duplicate repository_id detected')
+          if len(names) != len(set(names)):
+              raise SystemExit('duplicate full_name detected')
+          if any(record['stars'] < minimum for record in records):
+              raise SystemExit('threshold violation detected')
+          expected_order = sorted(records, key=lambda r: (-r['stars'], r['full_name'].lower()))
+          if records != expected_order:
+              raise SystemExit('non-deterministic dataset ordering detected')
+
+          for record in records:
+              errors = list(validator.iter_errors(record))
+              if errors:
+                  raise SystemExit(f"schema validation failed for {record.get('full_name')}: {errors[0].message}")
+              for field in ('created_at', 'updated_at', 'pushed_at', 'indexed_at'):
+                  value = record.get(field)
+                  if value:
+                      datetime.fromisoformat(value.replace('Z', '+00:00'))
+              for field in ('html_url', 'api_url'):
+                  parsed = urlparse(record[field])
+                  if parsed.scheme not in {'http', 'https'} or not parsed.netloc:
+                      raise SystemExit(f"invalid URL in {record.get('full_name')}: {field}")
+
+          stats = json.loads((root / 'data/statistics.json').read_text(encoding='utf-8'))
+          if stats.get('repository_count') != len(records):
+              raise SystemExit('statistics repository_count mismatch')
+          if stats.get('minimum_stars') != minimum:
+              raise SystemExit('statistics minimum_stars mismatch')
+
+          manifest = json.loads((root / 'data/manifest.json').read_text(encoding='utf-8'))
+          if manifest.get('repository_count') != len(records):
+              raise SystemExit('manifest repository_count mismatch')
+          if manifest.get('dataset_version') != data.get('dataset_version'):
+              raise SystemExit('manifest dataset_version mismatch')
+          if manifest.get('schema_version') != data.get('schema_version'):
+              raise SystemExit('manifest schema_version mismatch')
+
+          print(f'Validated {len(records)} repository records; threshold={minimum}; unique IDs/names; stable ordering; schema; URLs; timestamps; statistics; manifest')
           PY
 
       - name: Commit changed dataset
