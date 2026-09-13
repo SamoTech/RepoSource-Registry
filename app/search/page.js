@@ -3,7 +3,11 @@ import { getDataset, getStats, searchRepositories } from "../../lib/registry";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = { title: "Discover repositories", description: "Search and filter the RepoSource Registry snapshot." };
+export const metadata = {
+  title: "Discover GitHub repositories",
+  description: "Search and filter the RepoSource Registry snapshot by repository, owner, language, category, or star range.",
+  alternates: { canonical: "https://repo-source-registry.vercel.app/search" },
+};
 
 function starBandLabel(band) {
   return band || "2k+";
