@@ -143,6 +143,117 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(generate_list.csv_safe("=SUM(A1:A2)"), "'=SUM(A1:A2)")
         self.assertEqual(generate_list.csv_safe("normal"), "normal")
 
+    @staticmethod
+    def _response(payload):
+        response = Mock(status_code=200, headers={})
+        response.json.return_value = payload
+        return response
+
+    def test_collect_query_full_first_page_partial_second_page(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(100)), "incomplete_results": False}),
+            self._response({"items": [100], "incomplete_results": False}),
+            self._response({"total_count": 101, "items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2031..2060", 101, self.cfg, out)
+        self.assertEqual(out, list(range(101)))
+        self.assertEqual(session.get.call_count, 3)
+
+    def test_collect_query_single_partial_first_page(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(7)), "incomplete_results": False}),
+            self._response({"total_count": 7, "items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2031..2060", 7, self.cfg, out)
+        self.assertEqual(out, list(range(7)))
+        self.assertEqual(session.get.call_count, 2)
+
+    def test_collect_query_empty_page_after_results_terminates(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(100)), "incomplete_results": False}),
+            self._response({"items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2031..2060", 150, self.cfg, out)
+        self.assertEqual(out, list(range(100)))
+        self.assertEqual(session.get.call_count, 2)
+
+    def test_collect_query_exact_multiple_does_not_fetch_extra_page(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(100)), "incomplete_results": False}),
+            self._response({"items": list(range(100, 200)), "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2000..2050", 200, self.cfg, out)
+        self.assertEqual(out, list(range(200)))
+        self.assertEqual(session.get.call_count, 2)
+
+    def test_collect_query_one_result_over_page_boundary(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(100)), "incomplete_results": False}),
+            self._response({"items": [100], "incomplete_results": False}),
+            self._response({"total_count": 101, "items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2000..2050", 101, self.cfg, out)
+        self.assertEqual(len(out), 101)
+
+    def test_collect_query_zero_results(self):
+        session = Mock()
+        out = []
+        generate_list.collect_query(session, "stars:2000..2050", 0, self.cfg, out)
+        self.assertEqual(out, [])
+        self.assertEqual(session.get.call_count, 0)
+
+    def test_collect_query_api_error_is_not_swallowed(self):
+        session = Mock()
+        response = Mock(status_code=422, headers={})
+        response.raise_for_status.side_effect = RuntimeError("422 validation failed")
+        session.get.return_value = response
+        with self.assertRaises(RuntimeError):
+            generate_list.collect_query(session, "stars:2031..2060", 1, self.cfg, [])
+
+    def test_collect_query_malformed_items_is_rejected(self):
+        session = Mock()
+        session.get.return_value = self._response({"items": {}, "incomplete_results": False})
+        with self.assertRaises(ValueError):
+            generate_list.collect_query(session, "stars:2031..2060", 1, self.cfg, [])
+
+    def test_collect_query_incomplete_results_is_fatal(self):
+        session = Mock()
+        session.get.return_value = self._response({"items": [1], "incomplete_results": True})
+        with self.assertRaisesRegex(RuntimeError, "incomplete search results"):
+            generate_list.collect_query(session, "stars:2031..2060", 1, self.cfg, [])
+
+    def test_collect_query_dataset_change_refreshes_expected_count(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": list(range(100)), "incomplete_results": False}),
+            self._response({"items": list(range(100, 120)), "incomplete_results": False}),
+            self._response({"total_count": 120, "items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2031..2060", 200, self.cfg, out)
+        self.assertEqual(out, list(range(120)))
+        self.assertEqual(session.get.call_count, 3)
+
+    def test_collect_query_does_not_paginate_forever_on_empty_page(self):
+        session = Mock()
+        session.get.side_effect = [
+            self._response({"items": [], "incomplete_results": False}),
+        ]
+        out = []
+        generate_list.collect_query(session, "stars:2031..2060", 1000, self.cfg, out)
+        self.assertEqual(out, [])
+        self.assertEqual(session.get.call_count, 1)
+
 
 if __name__ == "__main__":
     unittest.main()
