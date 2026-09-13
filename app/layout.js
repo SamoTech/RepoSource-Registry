@@ -9,6 +9,9 @@ export const metadata = {
   title: { default: "RepoSource Registry — GitHub Repository Discovery", template: "%s · RepoSource Registry" },
   description: "Open, machine-readable GitHub repository discovery data with documented provenance, schema, and snapshots.",
   alternates: { canonical: siteUrl },
+  verification: {
+    google: "_EapoLGFWorKHOtsAEG4rjq0wg__sAgb5ARz1hrEBCw",
+  },
   openGraph: {
     title: "RepoSource Registry — GitHub Repository Discovery",
     description: "Open, machine-readable GitHub repository discovery data.",
