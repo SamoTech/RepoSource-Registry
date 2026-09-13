@@ -79,8 +79,17 @@ def collect_query(session: requests.Session, query: str, count: int, cfg: dict[s
     per_page = int(cfg["per_page"])
     if count > 1000:
         raise RuntimeError(f"Unsafe GitHub Search query (>1000 results): {query!r} count={count}")
-    pages = (count + per_page - 1) // per_page
-    for page in range(1, pages + 1):
+
+    # total_count is a snapshot, not a pagination invariant. Search results can
+    # change between the count request and subsequent pages. A short page is
+    # therefore a normal termination signal unless a refreshed count proves that
+    # more results should still be requested.
+    expected_count = count
+    accumulated = 0
+    page = 1
+    max_pages = (expected_count + per_page - 1) // per_page
+
+    while page <= max_pages:
         payload = request_json(session, API_URL, {
             "q": query,
             "sort": "stars",
@@ -88,10 +97,30 @@ def collect_query(session: requests.Session, query: str, count: int, cfg: dict[s
             "per_page": per_page,
             "page": page,
         }, cfg)
+        if payload.get("incomplete_results") is True:
+            raise RuntimeError(f"GitHub returned incomplete search results: query={query!r} page={page}")
+
         items = payload.get("items", [])
+        if not isinstance(items, list):
+            raise ValueError(f"GitHub Search response has malformed items: query={query!r} page={page}")
+
         out.extend(items)
-        if len(items) != per_page and page < pages:
-            raise RuntimeError(f"GitHub returned a short page before expected end: query={query!r} page={page}")
+        accumulated += len(items)
+
+        if not items:
+            break
+
+        if len(items) < per_page:
+            # The earlier total_count may have become stale. Refresh it once at
+            # the pagination boundary so a dataset growth/change cannot cause us
+            # to stop merely because this page was short.
+            refreshed_count = search_count(session, query, cfg)
+            if refreshed_count <= accumulated:
+                break
+            expected_count = refreshed_count
+            max_pages = max(max_pages, (expected_count + per_page - 1) // per_page)
+
+        page += 1
 
 
 def partition_range(session: requests.Session, low: int, high: int, cfg: dict[str, Any], out: list[dict[str, Any]]) -> None:
