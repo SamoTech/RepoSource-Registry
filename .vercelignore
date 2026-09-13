@@ -1,0 +1,6 @@
+# The Vercel application reads the canonical snapshot from the public GitHub distribution.
+data/repositories.json
+data/repositories.csv
+data/categories/
+data/languages/
+data/changes.json
