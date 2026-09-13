@@ -3,11 +3,16 @@ import { getDataset, getStats, searchRepositories } from "../../lib/registry";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Discover GitHub repositories",
-  description: "Search and filter the RepoSource Registry snapshot by repository, owner, language, category, or star range.",
-  alternates: { canonical: "https://repo-source-registry.vercel.app/search" },
-};
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const hasQuery = Boolean(params?.q || params?.language || params?.category || params?.topic || params?.minStars || (params?.sort && params.sort !== "stars"));
+  return {
+    title: "Discover GitHub repositories",
+    description: "Search and filter the RepoSource Registry snapshot by repository, owner, language, category, topic, or star range.",
+    alternates: { canonical: "https://repo-source-registry.vercel.app/search" },
+    robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
+  };
+}
 
 function starBandLabel(band) {
   return band || "2k+";
@@ -18,21 +23,22 @@ export default async function SearchPage({ searchParams }) {
   const q = params?.q || "";
   const language = params?.language || "";
   const category = params?.category || "";
+  const topic = params?.topic || "";
   const minStars = params?.minStars || "";
   const sort = params?.sort || "stars";
   const [dataset, stats] = await Promise.all([getDataset(), getStats()]);
-  const results = searchRepositories(dataset.repositories || [], { q, language, category, minStars, sort });
+  const results = searchRepositories(dataset.repositories || [], { q, language, category, topic, minStars, sort });
   const languages = Object.keys(stats.languages || {}).sort((a, b) => a.localeCompare(b));
   const categories = Object.keys(stats.categories || {}).sort((a, b) => a.localeCompare(b));
-  const hasFilters = Boolean(q || language || category || minStars || sort !== "stars");
-  const clearHref = "/search";
+  const hasFilters = Boolean(q || language || category || topic || minStars || sort !== "stars");
 
   return <div className="shell page">
     <div className="section-kicker">DISCOVERY / REGISTRY</div>
-    <div className="page-heading"><div><h1>Explore repositories</h1><p className="lead small">Search the published snapshot by repository, owner, language, category, or star range.</p></div><div className="page-counter"><strong>{stats.repository_count.toLocaleString()}</strong><span>indexed records</span></div></div>
+    <div className="page-heading"><div><h1>Explore repositories</h1><p className="lead small">Search the published snapshot by repository, owner, language, category, topic, or star range.</p></div><div className="page-counter"><strong>{stats.repository_count.toLocaleString()}</strong><span>indexed records</span></div></div>
 
     <form className="filters" action="/search">
       <label className="filter-search"><span className="sr-only">Search text</span><input name="q" defaultValue={q} placeholder="Name, owner, description, topic…" aria-label="Search repositories" /></label>
+      <input name="topic" defaultValue={topic} placeholder="Exact topic" aria-label="Filter by topic" />
       <select name="language" defaultValue={language} aria-label="Filter by language"><option value="">All languages</option>{languages.map(x => <option key={x}>{x}</option>)}</select>
       <select name="category" defaultValue={category} aria-label="Filter by category"><option value="">All categories</option>{categories.map(x => <option key={x}>{x}</option>)}</select>
       <select name="minStars" defaultValue={minStars} aria-label="Minimum stars"><option value="">Any stars</option><option value="5000">5k+</option><option value="10000">10k+</option><option value="50000">50k+</option></select>
@@ -40,7 +46,7 @@ export default async function SearchPage({ searchParams }) {
       <button type="submit">Apply</button>
     </form>
 
-    <div className="results-toolbar"><p className="result-count">{results.length ? `Showing ${results.length} matching result${results.length === 1 ? "" : "s"}` : "No matching repositories"}</p>{hasFilters && <Link href={clearHref} className="clear-link">Clear filters ×</Link>}</div>
+    <div className="results-toolbar"><p className="result-count">{results.length ? `Showing ${results.length} matching result${results.length === 1 ? "" : "s"}` : "No matching repositories"}</p>{hasFilters && <Link href="/search" className="clear-link">Clear filters ×</Link>}</div>
     <div className="results">{results.map(repo => {
       const owner = repo.owner || String(repo.full_name || "").split("/")[0];
       const name = repo.name || String(repo.full_name || "").split("/").pop();

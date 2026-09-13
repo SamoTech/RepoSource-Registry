@@ -138,7 +138,7 @@ The project makes no claims of AI endorsement, certification, indexing, or offic
 
 The public web layer uses Next.js App Router and server-rendered pages. It reads the existing canonical snapshot and statistics from the public GitHub distribution with revalidation caching; it does not create a database or regenerate the dataset during deployment.
 
-The interface provides repository search, language/category/star filters, repository detail views, upstream GitHub links, and direct dataset/schema/manifest/methodology navigation.
+The interface provides repository search, language/category/topic/star filters, repository detail views, upstream GitHub links, and direct dataset/schema/manifest/methodology navigation.
 
 See [`docs/vercel.md`](docs/vercel.md) for architecture, deployment, caching, security, and limitations.
 
@@ -162,9 +162,15 @@ Repositories below the configured star threshold are excluded. GitHub Search sem
 
 The canonical dataset remains public and directly consumable. There is no paid access tier and no monetization based on dataset request volume.
 
-Commercial value is created around the open data through engineering, integration, custom research, analytics, AI/RAG implementation, developer tooling, hosted custom experiences, consulting, and sponsorship. Sponsor identity does not influence inclusion, ranking, classification, or data integrity.
+Commercial value is created around the open data through engineering, integration, custom research/data work, analytics, AI/RAG implementation, developer tooling, hosted custom experiences, consulting, and sponsorship. Sponsor identity does not influence inclusion, ranking, classification, or data integrity.
 
 See [`docs/services.md`](docs/services.md), [`docs/sponsoring.md`](docs/sponsoring.md), and [`docs/monetization.md`](docs/monetization.md).
+
+## Sponsorship
+
+Sponsorship supports maintenance of the public infrastructure: dataset updates, validation, CI, documentation, research capability, and developer tooling. Sponsorship does not buy inclusion, ranking, classification, suppression, or influence over the registry.
+
+See [`docs/sponsoring.md`](docs/sponsoring.md) or the repository's **Sponsor** button when GitHub Sponsors is available for the maintainer account.
 
 ## Citation
 
