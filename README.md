@@ -1,187 +1,178 @@
 # RepoSource Registry
 
-> An open, machine-readable GitHub repository discovery dataset for developers, researchers, AI/data applications, and open-source tooling.
+> A machine-readable GitHub repository discovery dataset built from public GitHub repository metadata.
 
-[![Update Dataset](https://github.com/SamoTech/RepoSource-Registry/actions/workflows/update.yml/badge.svg)](https://github.com/SamoTech/RepoSource-Registry/actions/workflows/update.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+RepoSource Registry is a derived, periodically synchronized registry of public GitHub repositories meeting the configured popularity threshold. It is designed for people, developers, researchers, search systems, data pipelines, and AI agents that need a transparent repository discovery source.
 
-RepoSource Registry turns public GitHub repository search results into a documented, validated, reusable snapshot. It provides normalized repository metadata, a published schema, provenance, integrity metadata, focused partitions, statistics, and change information so downstream users can inspect, filter, cite, and integrate the data locally.
-
-GitHub remains the upstream source of repository facts. RepoSource Registry is a secondary snapshot: it is not an official GitHub database, complete mirror, real-time feed, or quality ranking.
-
-## Public discovery
-
-The public discovery interface is deployed on Vercel:
-
-**[Open RepoSource Registry Discovery →](https://repo-source-registry.vercel.app/)**
-
-The web application is a presentation and discovery layer. GitHub remains the canonical project and public data distribution.
-
-**[Inspect published data-quality metrics →](https://repo-source-registry.vercel.app/quality)**
+[![Update Dataset](https://github.com/SamoTech/RepoSource-Registry/actions/workflows/update.yml/badge.svg)](https://github.com/SamoTech/RepoSource-Registry/actions/workflows/update.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Current dataset
 
-The current published snapshot was generated on **2026-09-13T06:39:43Z** and contains repositories meeting the configured `stars >= 2,000` inclusion policy.
+The current published snapshot was generated from GitHub public repository metadata on **2026-09-14T07:57:53Z**.
 
 | Metric | Value |
 |---|---:|
-| Repositories | **33,180** |
-| Primary languages | **213** |
+| Indexed repositories | **33,186** |
+| Minimum stars | **2,000+** |
+| Languages represented | **213** |
 | Derived categories | **7** |
-| Minimum stars | **2,000** |
-| Star range | **2,000–546,891** |
-| Median stars | **3,879** |
-| Archived repositories | **2,451** |
-| Without primary language | **2,726** |
-| Without description | **612** |
+| Archived repositories | **2,452** |
+| Repositories without a primary language | **2,722** |
+| Repositories without a description | **608** |
+| Star range | **2,000–547,119** |
+| Median stars | **3,880** |
 | Dataset version | **1.0.0** |
 | Schema version | **1.1.0** |
+| Source | **GitHub public API** |
 
-Snapshot aggregates are maintained in [`data/statistics.json`](data/statistics.json); snapshot identity and integrity metadata are in [`data/manifest.json`](data/manifest.json).
+> Stars are a popularity signal, not a quality, security, or endorsement signal.
 
-## What you get
+## What is RepoSource Registry?
 
-- Canonical JSON dataset with normalized repository records.
-- CSV export for tabular workflows.
-- Language and category partitions for focused consumption.
-- Statistics and snapshot change information.
-- Manifest, synchronization metadata, and SHA-256 integrity hashes.
-- JSON Schema defining the repository record contract.
-- Machine-readable dataset metadata and [`llms.txt`](llms.txt) for automated consumers.
-- Public discovery UI source under `app/` for Vercel deployment.
+RepoSource Registry is an open data resource for discovering public GitHub repositories. It collects repository search results from GitHub's public API, normalizes the metadata into a stable schema, applies transparent derived classifications, validates the resulting records, and publishes JSON and CSV representations.
 
-The canonical registry is [`data/repositories.json`](data/repositories.json). Supporting artifacts do not replace it.
+The registry is intentionally a **secondary source**. GitHub remains the upstream source of repository metadata. The registry is not a complete mirror of GitHub, an official GitHub database, a real-time feed, or a software-quality ranking.
 
-## Why it exists
-
-GitHub Search is useful for interactive upstream discovery. A downstream application or research workflow may instead need a reproducible public snapshot that can be downloaded, tested, processed locally, cited, and compared over time.
-
-RepoSource Registry provides that secondary data layer without claiming to replace GitHub.
-
-## Quick start
-
-```bash
-git clone https://github.com/SamoTech/RepoSource-Registry.git
-cd RepoSource-Registry
-```
-
-Read the canonical dataset:
-
-```python
-import json
-
-with open("data/repositories.json", encoding="utf-8") as f:
-    dataset = json.load(f)
-
-print("repositories:", dataset["repository_count"])
-for repo in dataset["repositories"][:10]:
-    print(repo["full_name"], repo["stars"], repo["html_url"])
-```
-
-Or use `jq`:
-
-```bash
-jq -r '.repositories[] | select(.stars >= 50000) | [.full_name, .stars, (.primary_language // "No declared language"), .html_url] | @tsv' data/repositories.json
-```
-
-For a five-minute integration path, see [`docs/quickstart.md`](docs/quickstart.md).
-
-## Machine-readable resources
+## Canonical machine-readable resources
 
 | Resource | Purpose |
 |---|---|
-| [`data/repositories.json`](data/repositories.json) | **Canonical dataset** |
+| [`data/repositories.json`](data/repositories.json) | Canonical repository registry |
 | [`data/repositories.csv`](data/repositories.csv) | Tabular export |
-| [`data/manifest.json`](data/manifest.json) | Snapshot identity, versions, provenance, hashes |
-| [`data/statistics.json`](data/statistics.json) | Aggregate statistics |
-| [`data/changes.json`](data/changes.json) | Snapshot change information |
+| [`data/manifest.json`](data/manifest.json) | Dataset identity, versions, file hashes and provenance |
+| [`data/statistics.json`](data/statistics.json) | Aggregate dataset statistics |
+| [`data/changes.json`](data/changes.json) | Added, removed and changed repository records |
 | [`data/sync.json`](data/sync.json) | Synchronization audit metadata |
-| [`schema/repository.schema.json`](schema/repository.schema.json) | Record schema |
-| [`dataset.json`](dataset.json) | Dataset metadata and provenance |
-| [`llms.txt`](llms.txt) | Compact agent orientation |
+| [`schema/repository.schema.json`](schema/repository.schema.json) | JSON Schema contract |
+| [`dataset.json`](dataset.json) | Machine-readable dataset description |
+| [`llms.txt`](llms.txt) | Compact orientation for AI/LLM consumers |
+| [`docs/catalog.md`](docs/catalog.md) | Discovery catalog |
+| [`docs/data-dictionary.md`](docs/data-dictionary.md) | Field definitions |
+| [`docs/methodology.md`](docs/methodology.md) | Collection, validation and provenance methodology |
 
-See [`docs/data-dictionary.md`](docs/data-dictionary.md) for fields and [`docs/catalog.md`](docs/catalog.md) for discovery partitions.
+For programmatic use, prefer the canonical JSON dataset and schema over parsing this README.
 
-## Developer, research, and integration paths
+### Quick consumption
 
-- [`docs/quickstart.md`](docs/quickstart.md) — consume the dataset quickly.
-- [`docs/developer-adoption.md`](docs/developer-adoption.md) — downstream adoption experiments.
-- [`docs/data-engineering.md`](docs/data-engineering.md) — ETL, validation, indexing, and interoperability.
-- [`docs/ai-rag.md`](docs/ai-rag.md) — retrieval and RAG integration patterns.
-- [`docs/analytics.md`](docs/analytics.md) — factual descriptive analysis patterns.
-- [`docs/research.md`](docs/research.md) — research questions and limitations.
-- [`docs/reproducibility.md`](docs/reproducibility.md) — snapshot-based reproducibility.
-- [`docs/citation.md`](docs/citation.md) — citation guidance.
-- [`docs/data-quality.md`](docs/data-quality.md) — validation and known limitations.
-- [`docs/showcase.md`](docs/showcase.md) — future community showcase criteria.
-- [`docs/community-growth.md`](docs/community-growth.md) — contribution and community growth model.
-- [`docs/outreach.md`](docs/outreach.md) — maintainer-to-maintainer outreach guidance.
-- [`docs/content-strategy.md`](docs/content-strategy.md) — technical content priorities.
-- [`docs/feedback.md`](docs/feedback.md) — data, documentation, and UX feedback.
-- [`docs/research-partnerships.md`](docs/research-partnerships.md) — collaboration model.
-- [`docs/services.md`](docs/services.md) — professional services around the open data.
-- [`docs/sponsoring.md`](docs/sponsoring.md) — sponsorship and independence.
+```bash
+curl -L https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.json
+```
 
-## AI and data-agent usage
+## Most popular repositories in this snapshot
 
-Automated consumers should:
+| # | Repository | Stars | Language |
+|---:|---|---:|---|
+| 1 | [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | 547,119 | Markdown |
+| 2 | [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | 505,876 | No declared language |
+| 3 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 479,842 | Python |
+| 4 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 455,419 | TypeScript |
+| 5 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 396,728 | Python |
+| 6 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 389,636 | TypeScript |
+| 7 | [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) | 369,866 | Python |
+| 8 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 367,140 | TypeScript |
+| 9 | [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) | 360,860 | No declared language |
+| 10 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | 320,517 | Python |
 
-1. Read [`dataset.json`](dataset.json) for scope and provenance.
-2. Read [`data/manifest.json`](data/manifest.json) for snapshot identity and integrity.
+## Language discovery
+
+The dataset contains **213 distinct primary-language values**. Every language has a machine-readable partition under [`data/languages/`](data/languages/).
+
+| Language | Repositories |
+|---|---:|
+| **Python** | 5,873 |
+| **JavaScript** | 3,980 |
+| **TypeScript** | 3,607 |
+| **No declared language** | 2,722 |
+| **Go** | 2,298 |
+| **Java** | 1,946 |
+| **C++** | 1,703 |
+| **Rust** | 1,239 |
+| **C** | 1,212 |
+| **C#** | 930 |
+| **Shell** | 795 |
+| **PHP** | 752 |
+| **HTML** | 737 |
+| **Jupyter Notebook** | 723 |
+| **Swift** | 681 |
+| **Ruby** | 480 |
+| **Kotlin** | 469 |
+| **Objective-C** | 426 |
+| **CSS** | 290 |
+| **Vue** | 238 |
+
+See [`docs/catalog.md`](docs/catalog.md) and [`data/statistics.json`](data/statistics.json) for the complete inventory.
+
+## Topic and category discovery
+
+RepoSource Registry derives category views from GitHub repository topics using the configured category vocabulary. These are RepoSource classifications, not GitHub-native labels.
+
+| Category | Repositories |
+|---|---:|
+| **ai** | 2,756 |
+| **web** | 2,055 |
+| **devops** | 1,239 |
+| **developer-tools** | 917 |
+| **database** | 909 |
+| **security** | 858 |
+| **networking** | 502 |
+
+Machine-readable category partitions are under [`data/categories/`](data/categories/).
+
+## AI & machine discovery
+
+AI agents, LLM applications, research tools, coding assistants, and data pipelines should treat this repository as a documented secondary dataset.
+
+1. Read [`dataset.json`](dataset.json) for identity and intended use.
+2. Read [`data/manifest.json`](data/manifest.json) for snapshot version, provenance and integrity metadata.
 3. Read [`schema/repository.schema.json`](schema/repository.schema.json) before interpreting records.
-4. Consume the canonical dataset or a focused partition.
-5. Use `data/statistics.json` for aggregate claims.
-6. Treat mutable values as snapshot values.
-7. Use each record's `html_url` as the upstream repository reference.
-8. Verify consequential current facts against GitHub.
+4. Consume [`data/repositories.json`](data/repositories.json) as the canonical registry.
+5. Use [`data/statistics.json`](data/statistics.json) for aggregate claims.
+6. Use each record's `html_url` as the primary source reference for an individual repository.
+7. Treat mutable metadata as snapshot values and distinguish GitHub-provided fields from RepoSource-derived fields.
 
-The project makes no claims of AI endorsement, certification, indexing, or official trust status.
+## Provenance and trust
 
-## Vercel discovery architecture
+The upstream source is GitHub's public repository API. The configured inclusion policy is `stars >= 2000`. The collector partitions star ranges when required by GitHub Search limits, paginates eligible queries, normalizes metadata, validates records against the schema, removes duplicate repository identities, and publishes integrity metadata.
 
-The public web layer uses Next.js App Router and server-rendered pages. It reads the existing canonical snapshot and statistics from the public GitHub distribution with revalidation caching; it does not create a database or regenerate the dataset during deployment.
+Trust is based on provenance, reproducible code, schema validation, deterministic output ordering, SHA-256 manifest hashes, synchronization metadata, and explicit limitations. No endorsement or certification by GitHub, Google, Bing, OpenAI, Microsoft, Anthropic, or another organization is claimed.
 
-The interface provides repository search, language/category/topic/star filters, repository detail views, upstream GitHub links, and direct dataset/schema/manifest/methodology navigation.
+## Using and citing the dataset
 
-See [`docs/vercel.md`](docs/vercel.md) for architecture, deployment, caching, security, and limitations.
+For reproducible use, cite RepoSource Registry together with the `generated_at` snapshot timestamp, dataset/schema versions, and the canonical data file. For an individual repository, prefer the upstream GitHub `html_url` stored in the record.
 
-## Provenance, quality, and trust
+## Search and semantic discoverability
 
-**GitHub source → collection → partitioning/pagination → normalization → validation → deterministic classification → published snapshot → manifest/schema → downstream verification**
+This repository uses natural language to describe its actual entity and scope: GitHub repository registry, GitHub repository dataset, open source repository dataset, GitHub Search API dataset, repository discovery, GitHub repository metadata, programming-language repositories, developer tools, AI repository discovery, and machine-readable GitHub data.
 
-The scheduled collection process uses GitHub repository Search API results and the configured minimum-star threshold. Published artifacts include deterministic ordering, duplicate and threshold validation, schema validation, hashes, synchronization metadata, and explicit dataset/schema versions.
+The goal is semantic clarity and useful retrieval, not keyword stuffing.
 
-GitHub is the primary source for current repository facts. RepoSource Registry is a structured secondary snapshot.
+## Limitations
 
-See [`docs/methodology.md`](docs/methodology.md) and [`docs/data-quality.md`](docs/data-quality.md).
+- The registry is not a complete mirror of GitHub.
+- Repositories below the configured star threshold are excluded.
+- GitHub search results and repository metadata can change between snapshots.
+- Stars measure popularity, not quality, security, maintenance quality, or suitability.
+- Topics and language declarations can be missing or inconsistent.
+- Derived categories are determined by the configured topic vocabulary.
+- Archived repositories are included by the current configuration.
+- The dataset is a snapshot, not real-time state.
 
-## Freshness and limitations
+## Project quality and security
 
-The scheduled update workflow targets a weekly snapshot. The registry is not real-time and does not represent every GitHub repository.
+- Verification workflow: [`.github/workflows/verify.yml`](.github/workflows/verify.yml)
+- Update workflow: [`.github/workflows/update.yml`](.github/workflows/update.yml)
+- Tests: [`tests/`](tests/)
+- Security policy: [`SECURITY.md`](SECURITY.md)
+- Contribution guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- License: [`LICENSE`](LICENSE)
 
-Repositories below the configured star threshold are excluded. GitHub Search semantics and repository metadata can change. Stars are a popularity signal, not a measure of quality, security, maintenance, or endorsement. Language/topic metadata can be missing or inconsistent upstream, and RepoSource categories are derived labels rather than GitHub-native labels.
-
-## Open-data commercial boundary
-
-The canonical dataset remains public and directly consumable. There is no paid access tier and no monetization based on dataset request volume.
-
-Commercial value is created around the open data through engineering, integration, custom research/data work, analytics, AI/RAG implementation, developer tooling, hosted custom experiences, consulting, and sponsorship. Sponsor identity does not influence inclusion, ranking, classification, or data integrity.
-
-See [`docs/services.md`](docs/services.md), [`docs/sponsoring.md`](docs/sponsoring.md), and [`docs/monetization.md`](docs/monetization.md).
-
-## Sponsorship
-
-Sponsorship supports maintenance of the public infrastructure: dataset updates, validation, CI, documentation, research capability, and developer tooling. Sponsorship does not buy inclusion, ranking, classification, suppression, or influence over the registry.
-
-See [`docs/sponsoring.md`](docs/sponsoring.md) or the repository's **Sponsor** button when GitHub Sponsors is available for the maintainer account.
-
-## Citation
-
-For reproducible work, cite the project together with the snapshot timestamp, dataset version, schema version when relevant, and canonical data file. A verified [`CITATION.cff`](CITATION.cff) is included for project citation metadata. For individual repositories, use the record's `html_url` as the upstream reference.
+This project does not add website-only SEO files such as `robots.txt` or an XML sitemap because the primary public web surface is GitHub itself rather than a separately hosted site.
 
 ## License
 
-Project code and documentation are released under the [MIT License](LICENSE). Upstream repository metadata remains subject to GitHub's terms and the licenses applicable to individual repositories.
+Project code and documentation are MIT licensed. Upstream repository metadata remains subject to GitHub's terms and the licenses applicable to individual repositories.
 
 ---
 
-**RepoSource Registry** — open repository discovery data with explicit provenance, validation, schema, and machine-readable distribution.
+**RepoSource Registry** · public repository discovery data with explicit provenance, validation, schema, and machine-readable distribution.

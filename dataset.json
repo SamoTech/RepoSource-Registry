@@ -6,7 +6,7 @@
   "url": "https://github.com/SamoTech/RepoSource-Registry",
   "sameAs": "https://github.com/SamoTech/RepoSource-Registry",
   "version": "1.0.0",
-  "dateModified": "2026-09-13T06:39:43Z",
+  "dateModified": "2026-09-14T07:57:53Z",
   "license": "https://opensource.org/licenses/MIT",
   "isBasedOn": "https://docs.github.com/en/rest/search/search#search-repositories",
   "keywords": [
@@ -21,14 +21,30 @@
     "AI repository discovery",
     "machine-readable GitHub data"
   ],
-  "inclusionPolicy": {"minimum_stars": 2000},
+  "inclusionPolicy": {
+    "minimum_stars": 2000
+  },
   "distribution": [
-    {"encodingFormat": "application/json", "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.json"},
-    {"encodingFormat": "text/csv", "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.csv"}
+    {
+      "encodingFormat": "application/json",
+      "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.json"
+    },
+    {
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data/repositories.csv"
+    }
   ],
   "schema": "https://github.com/SamoTech/RepoSource-Registry/blob/main/schema/repository.schema.json",
-  "provenance": {"source": "github-public-api", "repositoryCount": 33180, "generatedAt": "2026-09-13T06:39:43Z"},
-  "derivedFields": ["categories", "popularity_band", "activity_status"],
+  "provenance": {
+    "source": "github-public-api",
+    "repositoryCount": 33186,
+    "generatedAt": "2026-09-14T07:57:53Z"
+  },
+  "derivedFields": [
+    "categories",
+    "popularity_band",
+    "activity_status"
+  ],
   "limitations": [
     "Not a complete mirror of GitHub.",
     "Not real-time.",

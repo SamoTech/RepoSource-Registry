@@ -10,9 +10,9 @@
       "html_url": "https://github.com/Joxit/docker-registry-ui",
       "api_url": "https://api.github.com/repos/Joxit/docker-registry-ui",
       "description": "The simplest and most complete UI for your private docker registry v2 and v3",
-      "stars": 3529,
+      "stars": 3530,
       "forks": 369,
-      "watchers": 3529,
+      "watchers": 3530,
       "open_issues": 42,
       "primary_language": "Riot",
       "topics": [
@@ -30,13 +30,13 @@
       "archived": false,
       "fork": false,
       "created_at": "2016-04-09T19:40:26Z",
-      "updated_at": "2026-09-13T01:33:31Z",
+      "updated_at": "2026-09-13T23:16:44Z",
       "pushed_at": "2026-08-10T15:10:57Z",
-      "indexed_at": "2026-09-13T06:39:43Z",
+      "indexed_at": "2026-09-14T07:57:53Z",
       "source": "github-public-api",
       "dataset_version": "1.0.0",
       "schema_version": "1.1.0",
-      "source_updated_at": "2026-09-13T01:33:31Z",
+      "source_updated_at": "2026-09-13T23:16:44Z",
       "categories": [
         "devops"
       ],

@@ -2,12 +2,12 @@
   "dataset": "RepoSource Registry",
   "dataset_version": "1.0.0",
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-13T06:39:43Z",
+  "generated_at": "2026-09-14T07:57:53Z",
   "source": "github-public-api",
   "inclusion_policy": {
     "minimum_stars": 2000
   },
-  "repository_count": 33180,
+  "repository_count": 33186,
   "languages": [
     "ActionScript",
     "Adblock Filter List",
@@ -112,8 +112,8 @@
     "Makefile",
     "Markdown",
     "Mathematica",
-    "Matlab",
     "MATLAB",
+    "Matlab",
     "MDX",
     "Mermaid",
     "Meson",
@@ -204,8 +204,8 @@
     "VBScript",
     "Verilog",
     "VHDL",
-    "Vim script",
     "Vim Script",
+    "Vim script",
     "Vim Snippet",
     "VimL",
     "Visual Basic",
@@ -234,24 +234,24 @@
   ],
   "files": {
     "data/repositories.json": {
-      "bytes": 40333698,
-      "sha256": "e572a1ae8fc816800c1c8965056d73b5c019194406a03773b2a4c4f9f4a58436"
+      "bytes": 40341384,
+      "sha256": "eddc3cd43916fdf2aadf9b40d750b4163f2821fe93b8d50179b50a9c47323fd6"
     },
     "data/repositories.csv": {
-      "bytes": 18062307,
-      "sha256": "2cd8fe72338b521867fa12939f52e9adeada7fb8a1b67194886e5dc8532adc2d"
+      "bytes": 18065805,
+      "sha256": "5d300bb0d3b4d56c47a7156d4cc8353470eb33de01e6735785b12d3693584206"
     },
     "data/statistics.json": {
       "bytes": 5007,
-      "sha256": "1c63036b9a99faa24e5fe163e840d524f242d7bd51de9f4f0b05dfb7ad2603ca"
+      "sha256": "015f1820f905632fbea7e9145f13d75dc4682f1d0e19f285a5fd1999cd7b158b"
     },
     "data/changes.json": {
-      "bytes": 484927,
-      "sha256": "1bb0925090d98923201ddb3c503318e260bd68bf2aa846cb9d6572c9f868ac06"
+      "bytes": 318430,
+      "sha256": "0ac79fa1e43c155859a32d94c6d44f1ee8e2485c05e2fcec1b4b439fdeaa1c27"
     },
     "data/sync.json": {
-      "bytes": 464,
-      "sha256": "f02c7cc4021646d2385ab33e774f176a7699b7868850a3721e054fa4b8ecb133"
+      "bytes": 465,
+      "sha256": "947a44ad97ce62e43e360cfcc7ffe0a79be76668c92052241c382b725c38915f"
     },
     "schema/repository.schema.json": {
       "bytes": 2063,

@@ -13,7 +13,7 @@
       "stars": 11055,
       "forks": 3809,
       "watchers": 11055,
-      "open_issues": 690,
+      "open_issues": 689,
       "primary_language": "ANTLR",
       "topics": [
         "hacktoberfest"
@@ -23,13 +23,13 @@
       "archived": false,
       "fork": false,
       "created_at": "2012-09-25T23:45:11Z",
-      "updated_at": "2026-09-12T15:22:30Z",
-      "pushed_at": "2026-09-12T15:22:28Z",
-      "indexed_at": "2026-09-13T06:39:43Z",
+      "updated_at": "2026-09-13T15:32:33Z",
+      "pushed_at": "2026-09-13T15:32:11Z",
+      "indexed_at": "2026-09-14T07:57:53Z",
       "source": "github-public-api",
       "dataset_version": "1.0.0",
       "schema_version": "1.1.0",
-      "source_updated_at": "2026-09-12T15:22:30Z",
+      "source_updated_at": "2026-09-13T15:32:33Z",
       "categories": [],
       "popularity_band": "10k+",
       "activity_status": "active"
