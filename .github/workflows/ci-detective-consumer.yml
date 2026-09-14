@@ -16,9 +16,9 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          def classify(value):
-              return value.missing_attribute
-          classify(object())
+          def add_values(left, right):
+              return left + right
+          add_values("text", 1)
           PY
 
   detective:
