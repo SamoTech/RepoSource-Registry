@@ -1,0 +1,49 @@
+name: CI Detective Consumer Test
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  intentional-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit representative TypeError failure
+        shell: bash
+        run: |
+          python - <<'PY'
+          def classify(value):
+              return value.missing_attribute
+          classify(object())
+          PY
+
+  detective:
+    if: ${{ failure() }}
+    needs: intentional-failure
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Run CI Detective v0.1.0
+        uses: SamoTech/CI-Detective@v0.1.0
+        id: detective
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Validate diagnosis outputs
+        env:
+          DIAGNOSIS: ${{ steps.detective.outputs.diagnosis }}
+          CONFIDENCE: ${{ steps.detective.outputs.confidence }}
+          SCHEMA_VERSION: ${{ steps.detective.outputs.schema_version }}
+        run: |
+          test -n "$DIAGNOSIS"
+          test -n "$CONFIDENCE"
+          test "$SCHEMA_VERSION" = "1.0"
+          echo "$DIAGNOSIS" | python -m json.tool
+          echo "$DIAGNOSIS" | grep -q 'TypeError'
