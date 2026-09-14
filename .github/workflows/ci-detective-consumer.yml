@@ -49,3 +49,4 @@ jobs:
           echo "$DIAGNOSIS" | grep -q 'TypeError'
           echo "$DIAGNOSIS" | grep -q 'intentional-failure'
           echo "$DIAGNOSIS" | grep -q 'schema_version'
+          echo "CI Detective generated diagnosis output successfully."
