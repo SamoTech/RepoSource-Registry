@@ -31,8 +31,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - name: Run CI Detective v0.1.0
-        uses: SamoTech/CI-Detective@v0.1.0
+      - name: Run current CI Detective
+        uses: SamoTech/CI-Detective@main
         id: detective
         env:
           GH_TOKEN: ${{ github.token }}
