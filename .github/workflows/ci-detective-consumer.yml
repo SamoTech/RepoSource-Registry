@@ -50,3 +50,9 @@ jobs:
           echo "$DIAGNOSIS" | grep -q 'intentional-failure'
           echo "$DIAGNOSIS" | grep -q 'schema_version'
           echo "CI Detective generated diagnosis output successfully."
+
+  central-nvidia:
+    needs: detective
+    uses: SamoTech/CI-Detective/.github/workflows/central-nvidia.yml@main
+    with:
+      evidence: ${{ needs.detective.outputs.diagnosis }}
