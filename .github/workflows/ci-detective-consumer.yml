@@ -36,7 +36,7 @@ jobs:
         id: detective
         env:
           GH_TOKEN: ${{ github.token }}
-      - name: Validate diagnosis outputs
+      - name: Validate CI Detective report and outputs
         env:
           DIAGNOSIS: ${{ steps.detective.outputs.diagnosis }}
           CONFIDENCE: ${{ steps.detective.outputs.confidence }}
@@ -47,3 +47,5 @@ jobs:
           test "$SCHEMA_VERSION" = "1.0"
           echo "$DIAGNOSIS" | python -m json.tool
           echo "$DIAGNOSIS" | grep -q 'TypeError'
+          echo "$DIAGNOSIS" | grep -q 'intentional-failure'
+          echo "$DIAGNOSIS" | grep -q 'schema_version'
