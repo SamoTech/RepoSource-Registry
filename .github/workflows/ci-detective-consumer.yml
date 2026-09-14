@@ -30,6 +30,10 @@ jobs:
       actions: read
       issues: write
       pull-requests: write
+    outputs:
+      diagnosis: ${{ steps.detective.outputs.diagnosis }}
+      confidence: ${{ steps.detective.outputs.confidence }}
+      schema_version: ${{ steps.detective.outputs.schema_version }}
     steps:
       - name: Run current CI Detective
         uses: SamoTech/CI-Detective@main
@@ -52,6 +56,7 @@ jobs:
           echo "CI Detective generated diagnosis output successfully."
 
   central-nvidia:
+    if: ${{ needs.detective.result == 'success' }}
     needs: detective
     uses: SamoTech/CI-Detective/.github/workflows/central-nvidia.yml@main
     with:
