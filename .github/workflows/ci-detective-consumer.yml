@@ -56,7 +56,7 @@ jobs:
           echo "CI Detective generated diagnosis output successfully."
 
   central-nvidia:
-    if: ${{ needs.detective.result == 'success' }}
+    if: ${{ always() && needs.detective.result == 'success' }}
     needs: detective
     uses: SamoTech/CI-Detective/.github/workflows/central-nvidia.yml@main
     with:
