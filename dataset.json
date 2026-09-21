@@ -6,7 +6,7 @@
   "url": "https://github.com/SamoTech/RepoSource-Registry",
   "sameAs": "https://github.com/SamoTech/RepoSource-Registry",
   "version": "1.0.0",
-  "dateModified": "2026-09-14T07:57:53Z",
+  "dateModified": "2026-09-21T08:01:18Z",
   "license": "https://opensource.org/licenses/MIT",
   "isBasedOn": "https://docs.github.com/en/rest/search/search#search-repositories",
   "keywords": [
@@ -37,8 +37,8 @@
   "schema": "https://github.com/SamoTech/RepoSource-Registry/blob/main/schema/repository.schema.json",
   "provenance": {
     "source": "github-public-api",
-    "repositoryCount": 33186,
-    "generatedAt": "2026-09-14T07:57:53Z"
+    "repositoryCount": 33305,
+    "generatedAt": "2026-09-21T08:01:18Z"
   },
   "derivedFields": [
     "categories",

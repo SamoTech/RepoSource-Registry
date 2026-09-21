@@ -2,12 +2,12 @@
   "dataset": "RepoSource Registry",
   "dataset_version": "1.0.0",
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-14T07:57:53Z",
+  "generated_at": "2026-09-21T08:01:18Z",
   "source": "github-public-api",
   "inclusion_policy": {
     "minimum_stars": 2000
   },
-  "repository_count": 33186,
+  "repository_count": 33305,
   "languages": [
     "ActionScript",
     "Adblock Filter List",
@@ -204,8 +204,8 @@
     "VBScript",
     "Verilog",
     "VHDL",
-    "Vim Script",
     "Vim script",
+    "Vim Script",
     "Vim Snippet",
     "VimL",
     "Visual Basic",
@@ -234,24 +234,24 @@
   ],
   "files": {
     "data/repositories.json": {
-      "bytes": 40341384,
-      "sha256": "eddc3cd43916fdf2aadf9b40d750b4163f2821fe93b8d50179b50a9c47323fd6"
+      "bytes": 40497284,
+      "sha256": "992564ac55aafb56e920e4ff2cda89f6c21bf4893c3a62801d5a65e382e2f238"
     },
     "data/repositories.csv": {
-      "bytes": 18065805,
-      "sha256": "5d300bb0d3b4d56c47a7156d4cc8353470eb33de01e6735785b12d3693584206"
+      "bytes": 18140110,
+      "sha256": "2e64b38135cb038414dba6aea15052c1fba9c0514d0becac941eb65fe78d17ba"
     },
     "data/statistics.json": {
-      "bytes": 5007,
-      "sha256": "015f1820f905632fbea7e9145f13d75dc4682f1d0e19f285a5fd1999cd7b158b"
+      "bytes": 5005,
+      "sha256": "f150154a6daaf4f225c8a33acde6efcab62a63eab7135544f66fd21ab6d28123"
     },
     "data/changes.json": {
-      "bytes": 318430,
-      "sha256": "0ac79fa1e43c155859a32d94c6d44f1ee8e2485c05e2fcec1b4b439fdeaa1c27"
+      "bytes": 609151,
+      "sha256": "e8ad659b5fc9770210aecd28cecbfec8749a2d0c22c3cae4bc6d50b2cc2b9c90"
     },
     "data/sync.json": {
-      "bytes": 465,
-      "sha256": "947a44ad97ce62e43e360cfcc7ffe0a79be76668c92052241c382b725c38915f"
+      "bytes": 466,
+      "sha256": "ac2aa8a276a80244e894c836e0208ba5fc228b1c42f06051fbce7c0930a97033"
     },
     "schema/repository.schema.json": {
       "bytes": 2063,
