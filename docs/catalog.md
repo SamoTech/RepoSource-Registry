@@ -2,60 +2,60 @@
 
 This catalog is generated from `data/statistics.json`. It provides compact discovery views without creating thousands of Markdown pages.
 
-Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars: **2,000+**.
+Snapshot: **2026-09-28T08:46:46Z** · repositories: **33,383** · minimum stars: **2,000+**.
 
 ## Languages
 
 | Language | Repositories | Machine-readable partition |
 |---|---:|---|
-| **Python** | 5,906 | [`data/languages/python.json`](../data/languages/python.json) |
-| **JavaScript** | 3,985 | [`data/languages/javascript.json`](../data/languages/javascript.json) |
-| **TypeScript** | 3,642 | [`data/languages/typescript.json`](../data/languages/typescript.json) |
-| **No declared language** | 2,725 | [`data/languages/no-declared-language.json`](../data/languages/no-declared-language.json) |
-| **Go** | 2,303 | [`data/languages/go.json`](../data/languages/go.json) |
-| **Java** | 1,944 | [`data/languages/java.json`](../data/languages/java.json) |
-| **C++** | 1,704 | [`data/languages/c.json`](../data/languages/c.json) |
-| **Rust** | 1,254 | [`data/languages/rust.json`](../data/languages/rust.json) |
-| **C** | 1,214 | [`data/languages/c-2.json`](../data/languages/c-2.json) |
-| **C#** | 934 | [`data/languages/c-3.json`](../data/languages/c-3.json) |
+| **Python** | 5,931 | [`data/languages/python.json`](../data/languages/python.json) |
+| **JavaScript** | 3,986 | [`data/languages/javascript.json`](../data/languages/javascript.json) |
+| **TypeScript** | 3,666 | [`data/languages/typescript.json`](../data/languages/typescript.json) |
+| **No declared language** | 2,734 | [`data/languages/no-declared-language.json`](../data/languages/no-declared-language.json) |
+| **Go** | 2,310 | [`data/languages/go.json`](../data/languages/go.json) |
+| **Java** | 1,945 | [`data/languages/java.json`](../data/languages/java.json) |
+| **C++** | 1,702 | [`data/languages/c.json`](../data/languages/c.json) |
+| **Rust** | 1,259 | [`data/languages/rust.json`](../data/languages/rust.json) |
+| **C** | 1,216 | [`data/languages/c-2.json`](../data/languages/c-2.json) |
+| **C#** | 933 | [`data/languages/c-3.json`](../data/languages/c-3.json) |
 | **Shell** | 795 | [`data/languages/shell.json`](../data/languages/shell.json) |
 | **PHP** | 753 | [`data/languages/php.json`](../data/languages/php.json) |
-| **HTML** | 740 | [`data/languages/html.json`](../data/languages/html.json) |
+| **HTML** | 739 | [`data/languages/html.json`](../data/languages/html.json) |
 | **Jupyter Notebook** | 726 | [`data/languages/jupyter-notebook.json`](../data/languages/jupyter-notebook.json) |
-| **Swift** | 683 | [`data/languages/swift.json`](../data/languages/swift.json) |
+| **Swift** | 685 | [`data/languages/swift.json`](../data/languages/swift.json) |
 | **Ruby** | 481 | [`data/languages/ruby.json`](../data/languages/ruby.json) |
-| **Kotlin** | 470 | [`data/languages/kotlin.json`](../data/languages/kotlin.json) |
+| **Kotlin** | 472 | [`data/languages/kotlin.json`](../data/languages/kotlin.json) |
 | **Objective-C** | 426 | [`data/languages/objective-c.json`](../data/languages/objective-c.json) |
 | **CSS** | 290 | [`data/languages/css.json`](../data/languages/css.json) |
-| **Vue** | 237 | [`data/languages/vue.json`](../data/languages/vue.json) |
+| **Vue** | 234 | [`data/languages/vue.json`](../data/languages/vue.json) |
 | **Dart** | 217 | [`data/languages/dart.json`](../data/languages/dart.json) |
 | **Lua** | 188 | [`data/languages/lua.json`](../data/languages/lua.json) |
 | **PowerShell** | 91 | [`data/languages/powershell.json`](../data/languages/powershell.json) |
-| **Vim Script** | 90 | [`data/languages/vim-script.json`](../data/languages/vim-script.json) |
-| **Scala** | 82 | [`data/languages/scala.json`](../data/languages/scala.json) |
-| **TeX** | 76 | [`data/languages/tex.json`](../data/languages/tex.json) |
+| **Vim Script** | 89 | [`data/languages/vim-script.json`](../data/languages/vim-script.json) |
+| **Scala** | 83 | [`data/languages/scala.json`](../data/languages/scala.json) |
+| **TeX** | 77 | [`data/languages/tex.json`](../data/languages/tex.json) |
 | **SCSS** | 65 | [`data/languages/scss.json`](../data/languages/scss.json) |
 | **Makefile** | 54 | [`data/languages/makefile.json`](../data/languages/makefile.json) |
 | **Elixir** | 48 | [`data/languages/elixir.json`](../data/languages/elixir.json) |
 | **Markdown** | 47 | [`data/languages/markdown.json`](../data/languages/markdown.json) |
 | **Haskell** | 46 | [`data/languages/haskell.json`](../data/languages/haskell.json) |
-| **MDX** | 46 | [`data/languages/mdx.json`](../data/languages/mdx.json) |
 | **Clojure** | 45 | [`data/languages/clojure.json`](../data/languages/clojure.json) |
-| **Dockerfile** | 43 | [`data/languages/dockerfile.json`](../data/languages/dockerfile.json) |
+| **MDX** | 45 | [`data/languages/mdx.json`](../data/languages/mdx.json) |
+| **Dockerfile** | 44 | [`data/languages/dockerfile.json`](../data/languages/dockerfile.json) |
 | **Perl** | 38 | [`data/languages/perl.json`](../data/languages/perl.json) |
 | **CoffeeScript** | 37 | [`data/languages/coffeescript.json`](../data/languages/coffeescript.json) |
 | **Assembly** | 35 | [`data/languages/assembly.json`](../data/languages/assembly.json) |
 | **Emacs Lisp** | 34 | [`data/languages/emacs-lisp.json`](../data/languages/emacs-lisp.json) |
-| **Batchfile** | 30 | [`data/languages/batchfile.json`](../data/languages/batchfile.json) |
-| **Zig** | 28 | [`data/languages/zig.json`](../data/languages/zig.json) |
+| **Batchfile** | 31 | [`data/languages/batchfile.json`](../data/languages/batchfile.json) |
+| **Zig** | 29 | [`data/languages/zig.json`](../data/languages/zig.json) |
 | **R** | 27 | [`data/languages/r.json`](../data/languages/r.json) |
-| **HCL** | 23 | [`data/languages/hcl.json`](../data/languages/hcl.json) |
+| **HCL** | 22 | [`data/languages/hcl.json`](../data/languages/hcl.json) |
+| **Nix** | 22 | [`data/languages/nix.json`](../data/languages/nix.json) |
+| **Svelte** | 22 | [`data/languages/svelte.json`](../data/languages/svelte.json) |
 | **Cuda** | 21 | [`data/languages/cuda.json`](../data/languages/cuda.json) |
-| **Nix** | 21 | [`data/languages/nix.json`](../data/languages/nix.json) |
-| **Svelte** | 21 | [`data/languages/svelte.json`](../data/languages/svelte.json) |
-| **Astro** | 20 | [`data/languages/astro.json`](../data/languages/astro.json) |
+| **GDScript** | 20 | [`data/languages/gdscript.json`](../data/languages/gdscript.json) |
 | **Vim script** | 20 | [`data/languages/vim-script-2.json`](../data/languages/vim-script-2.json) |
-| **GDScript** | 19 | [`data/languages/gdscript.json`](../data/languages/gdscript.json) |
+| **Astro** | 19 | [`data/languages/astro.json`](../data/languages/astro.json) |
 | **OCaml** | 19 | [`data/languages/ocaml.json`](../data/languages/ocaml.json) |
 | **Solidity** | 18 | [`data/languages/solidity.json`](../data/languages/solidity.json) |
 | **Objective-C++** | 17 | [`data/languages/objective-c-2.json`](../data/languages/objective-c-2.json) |
@@ -96,6 +96,7 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 | **Matlab** | 5 | [`data/languages/matlab-2.json`](../data/languages/matlab-2.json) |
 | **Nim** | 5 | [`data/languages/nim.json`](../data/languages/nim.json) |
 | **Nunjucks** | 5 | [`data/languages/nunjucks.json`](../data/languages/nunjucks.json) |
+| **Smali** | 5 | [`data/languages/smali.json`](../data/languages/smali.json) |
 | **TSQL** | 5 | [`data/languages/tsql.json`](../data/languages/tsql.json) |
 | **XSLT** | 5 | [`data/languages/xslt.json`](../data/languages/xslt.json) |
 | **ActionScript** | 4 | [`data/languages/actionscript.json`](../data/languages/actionscript.json) |
@@ -105,7 +106,6 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 | **NSIS** | 4 | [`data/languages/nsis.json`](../data/languages/nsis.json) |
 | **OpenSCAD** | 4 | [`data/languages/openscad.json`](../data/languages/openscad.json) |
 | **Reason** | 4 | [`data/languages/reason.json`](../data/languages/reason.json) |
-| **Smali** | 4 | [`data/languages/smali.json`](../data/languages/smali.json) |
 | **Starlark** | 4 | [`data/languages/starlark.json`](../data/languages/starlark.json) |
 | **SystemVerilog** | 4 | [`data/languages/systemverilog.json`](../data/languages/systemverilog.json) |
 | **Vim Snippet** | 4 | [`data/languages/vim-snippet.json`](../data/languages/vim-snippet.json) |
@@ -115,6 +115,7 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 | **Handlebars** | 3 | [`data/languages/handlebars.json`](../data/languages/handlebars.json) |
 | **HLSL** | 3 | [`data/languages/hlsl.json`](../data/languages/hlsl.json) |
 | **Just** | 3 | [`data/languages/just.json`](../data/languages/just.json) |
+| **Lean** | 3 | [`data/languages/lean.json`](../data/languages/lean.json) |
 | **Mustache** | 3 | [`data/languages/mustache.json`](../data/languages/mustache.json) |
 | **Processing** | 3 | [`data/languages/processing.json`](../data/languages/processing.json) |
 | **Sass** | 3 | [`data/languages/sass.json`](../data/languages/sass.json) |
@@ -132,7 +133,6 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 | **Hack** | 2 | [`data/languages/hack.json`](../data/languages/hack.json) |
 | **HolyC** | 2 | [`data/languages/holyc.json`](../data/languages/holyc.json) |
 | **JSON** | 2 | [`data/languages/json.json`](../data/languages/json.json) |
-| **Lean** | 2 | [`data/languages/lean.json`](../data/languages/lean.json) |
 | **LLVM** | 2 | [`data/languages/llvm.json`](../data/languages/llvm.json) |
 | **Logos** | 2 | [`data/languages/logos.json`](../data/languages/logos.json) |
 | **Mermaid** | 2 | [`data/languages/mermaid.json`](../data/languages/mermaid.json) |
@@ -160,6 +160,7 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 | **AsciiDoc** | 1 | [`data/languages/asciidoc.json`](../data/languages/asciidoc.json) |
 | **ASP** | 1 | [`data/languages/asp.json`](../data/languages/asp.json) |
 | **Ballerina** | 1 | [`data/languages/ballerina.json`](../data/languages/ballerina.json) |
+| **BibTeX Style** | 1 | [`data/languages/bibtex-style.json`](../data/languages/bibtex-style.json) |
 | **BitBake** | 1 | [`data/languages/bitbake.json`](../data/languages/bitbake.json) |
 | **BlitzBasic** | 1 | [`data/languages/blitzbasic.json`](../data/languages/blitzbasic.json) |
 | **Boo** | 1 | [`data/languages/boo.json`](../data/languages/boo.json) |
@@ -226,10 +227,10 @@ Snapshot: **2026-09-21T08:01:18Z** · repositories: **33,305** · minimum stars:
 
 | Category | Repositories | Machine-readable partition |
 |---|---:|---|
-| **ai** | 2,780 | [`data/categories/ai.json`](../data/categories/ai.json) |
-| **web** | 2,057 | [`data/categories/web.json`](../data/categories/web.json) |
-| **devops** | 1,245 | [`data/categories/devops.json`](../data/categories/devops.json) |
-| **developer-tools** | 923 | [`data/categories/developer-tools.json`](../data/categories/developer-tools.json) |
-| **database** | 910 | [`data/categories/database.json`](../data/categories/database.json) |
-| **security** | 860 | [`data/categories/security.json`](../data/categories/security.json) |
-| **networking** | 504 | [`data/categories/networking.json`](../data/categories/networking.json) |
+| **ai** | 2,791 | [`data/categories/ai.json`](../data/categories/ai.json) |
+| **web** | 2,059 | [`data/categories/web.json`](../data/categories/web.json) |
+| **devops** | 1,249 | [`data/categories/devops.json`](../data/categories/devops.json) |
+| **developer-tools** | 933 | [`data/categories/developer-tools.json`](../data/categories/developer-tools.json) |
+| **database** | 912 | [`data/categories/database.json`](../data/categories/database.json) |
+| **security** | 863 | [`data/categories/security.json`](../data/categories/security.json) |
+| **networking** | 506 | [`data/categories/networking.json`](../data/categories/networking.json) |

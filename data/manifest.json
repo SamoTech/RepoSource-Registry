@@ -2,12 +2,12 @@
   "dataset": "RepoSource Registry",
   "dataset_version": "1.0.0",
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-21T08:01:18Z",
+  "generated_at": "2026-09-28T08:46:46Z",
   "source": "github-public-api",
   "inclusion_policy": {
     "minimum_stars": 2000
   },
-  "repository_count": 33305,
+  "repository_count": 33383,
   "languages": [
     "ActionScript",
     "Adblock Filter List",
@@ -26,6 +26,7 @@
     "Awk",
     "Ballerina",
     "Batchfile",
+    "BibTeX Style",
     "Bicep",
     "Bikeshed",
     "BitBake",
@@ -204,8 +205,8 @@
     "VBScript",
     "Verilog",
     "VHDL",
-    "Vim script",
     "Vim Script",
+    "Vim script",
     "Vim Snippet",
     "VimL",
     "Visual Basic",
@@ -234,24 +235,24 @@
   ],
   "files": {
     "data/repositories.json": {
-      "bytes": 40497284,
-      "sha256": "992564ac55aafb56e920e4ff2cda89f6c21bf4893c3a62801d5a65e382e2f238"
+      "bytes": 40599966,
+      "sha256": "b4af7f56305523de564224c92703fa7527598af5ce8aef38a4707ad9706b049a"
     },
     "data/repositories.csv": {
-      "bytes": 18140110,
-      "sha256": "2e64b38135cb038414dba6aea15052c1fba9c0514d0becac941eb65fe78d17ba"
+      "bytes": 18188888,
+      "sha256": "f545a55b6ee29162121c9d9240701203e193793eeb4f54fcff368832c2578ef5"
     },
     "data/statistics.json": {
-      "bytes": 5005,
-      "sha256": "f150154a6daaf4f225c8a33acde6efcab62a63eab7135544f66fd21ab6d28123"
+      "bytes": 5028,
+      "sha256": "bc658a49b3f2b3a96d5efdd2e56c4d2b61af9f0ec8edcfcd66dc4afe7ba4b54b"
     },
     "data/changes.json": {
-      "bytes": 609151,
-      "sha256": "e8ad659b5fc9770210aecd28cecbfec8749a2d0c22c3cae4bc6d50b2cc2b9c90"
+      "bytes": 573551,
+      "sha256": "e2eb324a49df8bc15cb98c662327167bf05ed7c7789a4fb869528cc05c6b8892"
     },
     "data/sync.json": {
-      "bytes": 466,
-      "sha256": "ac2aa8a276a80244e894c836e0208ba5fc228b1c42f06051fbce7c0930a97033"
+      "bytes": 465,
+      "sha256": "edca8351af25e2988039a1a7a4aded37b9b50d32f6508f0b04adac4599bc77ac"
     },
     "schema/repository.schema.json": {
       "bytes": 2063,
