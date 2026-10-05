@@ -2,12 +2,12 @@
   "dataset": "RepoSource Registry",
   "dataset_version": "1.0.0",
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-28T08:46:46Z",
+  "generated_at": "2026-10-05T09:13:02Z",
   "source": "github-public-api",
   "inclusion_policy": {
     "minimum_stars": 2000
   },
-  "repository_count": 33383,
+  "repository_count": 33457,
   "languages": [
     "ActionScript",
     "Adblock Filter List",
@@ -113,8 +113,8 @@
     "Makefile",
     "Markdown",
     "Mathematica",
-    "MATLAB",
     "Matlab",
+    "MATLAB",
     "MDX",
     "Mermaid",
     "Meson",
@@ -235,24 +235,24 @@
   ],
   "files": {
     "data/repositories.json": {
-      "bytes": 40599966,
-      "sha256": "b4af7f56305523de564224c92703fa7527598af5ce8aef38a4707ad9706b049a"
+      "bytes": 40696935,
+      "sha256": "077db471f96b34f9b58c12bb669816a7603857ea1f6819dc8796ab7a7afa4db7"
     },
     "data/repositories.csv": {
-      "bytes": 18188888,
-      "sha256": "f545a55b6ee29162121c9d9240701203e193793eeb4f54fcff368832c2578ef5"
+      "bytes": 18235091,
+      "sha256": "72f4d662803f3aaf45d05ab0cc17c5f266c3b589c6e8de6345fb6d32d98e3034"
     },
     "data/statistics.json": {
       "bytes": 5028,
-      "sha256": "bc658a49b3f2b3a96d5efdd2e56c4d2b61af9f0ec8edcfcd66dc4afe7ba4b54b"
+      "sha256": "1e365ea28bfebfcf475f694a1c7179e613185a1c1ce19bbbdd26f9c869cc5264"
     },
     "data/changes.json": {
-      "bytes": 573551,
-      "sha256": "e2eb324a49df8bc15cb98c662327167bf05ed7c7789a4fb869528cc05c6b8892"
+      "bytes": 584492,
+      "sha256": "ef95812827bd37e8d2db88d0908e8dc15acfd9a17245394e6917635dc34d587c"
     },
     "data/sync.json": {
-      "bytes": 465,
-      "sha256": "edca8351af25e2988039a1a7a4aded37b9b50d32f6508f0b04adac4599bc77ac"
+      "bytes": 466,
+      "sha256": "e30a6f261a7c898ad9fed8b19511786ff65212d3136e8cf6ccb3c87a91dcd547"
     },
     "schema/repository.schema.json": {
       "bytes": 2063,
