@@ -10,9 +10,9 @@
       "html_url": "https://github.com/sharkdp/insect",
       "api_url": "https://api.github.com/repos/sharkdp/insect",
       "description": "High precision scientific calculator with support for physical units",
-      "stars": 3169,
+      "stars": 3170,
       "forks": 127,
-      "watchers": 3169,
+      "watchers": 3170,
       "open_issues": 4,
       "primary_language": "PureScript",
       "topics": [
@@ -31,13 +31,13 @@
       "archived": true,
       "fork": false,
       "created_at": "2017-02-25T15:10:45Z",
-      "updated_at": "2026-09-21T12:14:10Z",
+      "updated_at": "2026-10-09T19:01:24Z",
       "pushed_at": "2025-02-10T20:25:49Z",
-      "indexed_at": "2026-10-05T09:13:02Z",
+      "indexed_at": "2026-10-12T09:22:50Z",
       "source": "github-public-api",
       "dataset_version": "1.0.0",
       "schema_version": "1.1.0",
-      "source_updated_at": "2026-09-21T12:14:10Z",
+      "source_updated_at": "2026-10-09T19:01:24Z",
       "categories": [],
       "popularity_band": "2k+",
       "activity_status": "inactive"
@@ -50,9 +50,9 @@
       "html_url": "https://github.com/sharkdp/cube-composer",
       "api_url": "https://api.github.com/repos/sharkdp/cube-composer",
       "description": "A puzzle game inspired by functional programming",
-      "stars": 2045,
-      "forks": 85,
-      "watchers": 2045,
+      "stars": 2046,
+      "forks": 86,
+      "watchers": 2046,
       "open_issues": 10,
       "primary_language": "PureScript",
       "topics": [
@@ -68,16 +68,16 @@
       "archived": false,
       "fork": false,
       "created_at": "2015-03-09T20:30:17Z",
-      "updated_at": "2026-10-05T04:11:13Z",
-      "pushed_at": "2022-12-08T09:23:40Z",
-      "indexed_at": "2026-10-05T09:13:02Z",
+      "updated_at": "2026-10-11T20:10:44Z",
+      "pushed_at": "2026-10-11T20:10:40Z",
+      "indexed_at": "2026-10-12T09:22:50Z",
       "source": "github-public-api",
       "dataset_version": "1.0.0",
       "schema_version": "1.1.0",
-      "source_updated_at": "2026-10-05T04:11:13Z",
+      "source_updated_at": "2026-10-11T20:10:44Z",
       "categories": [],
       "popularity_band": "2k+",
-      "activity_status": "inactive"
+      "activity_status": "active"
     }
   ]
 }
