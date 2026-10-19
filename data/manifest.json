@@ -2,12 +2,12 @@
   "dataset": "RepoSource Registry",
   "dataset_version": "1.0.0",
   "schema_version": "1.1.0",
-  "generated_at": "2026-10-12T09:22:50Z",
+  "generated_at": "2026-10-19T07:53:53Z",
   "source": "github-public-api",
   "inclusion_policy": {
     "minimum_stars": 2000
   },
-  "repository_count": 33562,
+  "repository_count": 33667,
   "languages": [
     "ActionScript",
     "Adblock Filter List",
@@ -113,8 +113,8 @@
     "Makefile",
     "Markdown",
     "Mathematica",
-    "Matlab",
     "MATLAB",
+    "Matlab",
     "MDX",
     "Mermaid",
     "Meson",
@@ -162,7 +162,6 @@
     "Red",
     "Ren'Py",
     "RenderScript",
-    "ReScript",
     "reStructuredText",
     "Rich Text Format",
     "Riot",
@@ -236,24 +235,24 @@
   ],
   "files": {
     "data/repositories.json": {
-      "bytes": 40835047,
-      "sha256": "810120d13901451b617625e7abb15e05a13d5ae17b6d1408d5270aad71a35c85"
+      "bytes": 40970417,
+      "sha256": "be21805b8ea8dee06f7ef35d9e39968465baccc260cf712f224c38e9cf77c3b9"
     },
     "data/repositories.csv": {
-      "bytes": 18301162,
-      "sha256": "4d635e381f8de7ea21ebf09e5302ac5bf07fe56ee872553b84d1e426a450916f"
+      "bytes": 18364629,
+      "sha256": "19250606fd2d2b519dc85112baf675a7cca3c0c6149976766a1adf58d84b3351"
     },
     "data/statistics.json": {
-      "bytes": 5049,
-      "sha256": "8bd223c036fef1b64ede88cc80b70f374377395f85e6516940bbef7faef6d721"
+      "bytes": 5028,
+      "sha256": "de9c4bb51aed885607d47435ad8466f8de910d6615ee4dffba824de069c4ba85"
     },
     "data/changes.json": {
-      "bytes": 643005,
-      "sha256": "812752a1102699f8b02bc14d4819f1b39531636d1a1f491cbe9902a3d3cf51ea"
+      "bytes": 637402,
+      "sha256": "2f5efcc15956a181b5f50a4861373541d8305c3cae60eb1dd070dc9ce62e3de6"
     },
     "data/sync.json": {
       "bytes": 467,
-      "sha256": "afa9d4957dd2d0852cefb2106db19de7512ad5db1cc40334cdc8690278ea147c"
+      "sha256": "03a68f70cbd28f53a56a464c75c7a182e4ffa2a1e84045fb470c4c218d0a1007"
     },
     "schema/repository.schema.json": {
       "bytes": 2063,

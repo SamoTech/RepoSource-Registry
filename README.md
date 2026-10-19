@@ -9,18 +9,18 @@ RepoSource Registry is a derived, periodically synchronized registry of public G
 
 ## Current dataset
 
-The current published snapshot was generated from GitHub public repository metadata on **2026-10-12T09:22:50Z**.
+The current published snapshot was generated from GitHub public repository metadata on **2026-10-19T07:53:53Z**.
 
 | Metric | Value |
 |---|---:|
-| Indexed repositories | **33,562** |
+| Indexed repositories | **33,667** |
 | Minimum stars | **2,000+** |
-| Languages represented | **215** |
+| Languages represented | **214** |
 | Derived categories | **7** |
-| Archived repositories | **2,511** |
-| Repositories without a primary language | **2,746** |
-| Repositories without a description | **615** |
-| Star range | **2,000–552,666** |
+| Archived repositories | **2,523** |
+| Repositories without a primary language | **2,750** |
+| Repositories without a description | **618** |
+| Star range | **2,000–554,435** |
 | Median stars | **3,887** |
 | Dataset version | **1.0.0** |
 | Schema version | **1.1.0** |
@@ -63,42 +63,42 @@ curl -L https://raw.githubusercontent.com/SamoTech/RepoSource-Registry/main/data
 
 | # | Repository | Stars | Language |
 |---:|---|---:|---|
-| 1 | [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | 552,666 | Markdown |
-| 2 | [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | 517,869 | No declared language |
-| 3 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 487,753 | Python |
-| 4 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 456,917 | TypeScript |
-| 5 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 398,815 | Python |
-| 6 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 391,739 | TypeScript |
-| 7 | [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) | 373,859 | Python |
-| 8 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,190 | TypeScript |
-| 9 | [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) | 362,402 | No declared language |
-| 10 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | 326,746 | Python |
+| 1 | [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | 554,435 | Markdown |
+| 2 | [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | 521,144 | No declared language |
+| 3 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 490,226 | Python |
+| 4 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 457,463 | TypeScript |
+| 5 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 399,525 | Python |
+| 6 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 392,431 | TypeScript |
+| 7 | [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) | 374,699 | Python |
+| 8 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,827 | TypeScript |
+| 9 | [jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university) | 362,917 | No declared language |
+| 10 | [vinta/awesome-python](https://github.com/vinta/awesome-python) | 328,569 | Python |
 
 ## Language discovery
 
-The dataset contains **215 distinct primary-language values**. Every language has a machine-readable partition under [`data/languages/`](data/languages/).
+The dataset contains **214 distinct primary-language values**. Every language has a machine-readable partition under [`data/languages/`](data/languages/).
 
 | Language | Repositories |
 |---|---:|
-| **Python** | 5,982 |
-| **JavaScript** | 3,998 |
-| **TypeScript** | 3,698 |
-| **No declared language** | 2,746 |
-| **Go** | 2,315 |
-| **Java** | 1,943 |
-| **C++** | 1,722 |
-| **Rust** | 1,291 |
-| **C** | 1,218 |
-| **C#** | 938 |
-| **Shell** | 793 |
+| **Python** | 5,996 |
+| **JavaScript** | 4,007 |
+| **TypeScript** | 3,720 |
+| **No declared language** | 2,750 |
+| **Go** | 2,323 |
+| **Java** | 1,945 |
+| **C++** | 1,730 |
+| **Rust** | 1,305 |
+| **C** | 1,224 |
+| **C#** | 942 |
+| **Shell** | 795 |
 | **PHP** | 752 |
-| **HTML** | 741 |
-| **Jupyter Notebook** | 727 |
-| **Swift** | 685 |
-| **Kotlin** | 482 |
-| **Ruby** | 481 |
-| **Objective-C** | 424 |
-| **CSS** | 290 |
+| **HTML** | 746 |
+| **Jupyter Notebook** | 726 |
+| **Swift** | 690 |
+| **Kotlin** | 486 |
+| **Ruby** | 480 |
+| **Objective-C** | 422 |
+| **CSS** | 291 |
 | **Vue** | 233 |
 
 See [`docs/catalog.md`](docs/catalog.md) and [`data/statistics.json`](data/statistics.json) for the complete inventory.
@@ -109,13 +109,13 @@ RepoSource Registry derives category views from GitHub repository topics using t
 
 | Category | Repositories |
 |---|---:|
-| **ai** | 2,824 |
-| **web** | 2,068 |
-| **devops** | 1,252 |
-| **developer-tools** | 952 |
-| **database** | 916 |
-| **security** | 871 |
-| **networking** | 509 |
+| **ai** | 2,827 |
+| **web** | 2,074 |
+| **devops** | 1,251 |
+| **developer-tools** | 960 |
+| **database** | 917 |
+| **security** | 877 |
+| **networking** | 510 |
 
 Machine-readable category partitions are under [`data/categories/`](data/categories/).
 
